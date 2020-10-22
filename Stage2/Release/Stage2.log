@@ -1,0 +1,14 @@
+﻿  Config.cpp
+  ImageIO.cpp
+  Intersection.cpp
+  Lighting.cpp
+  Raytrace.cpp
+c:\users\wdcta\onedrive\desktop\kit308\assignment 1 submission william colbert 414747\raytracerass1\stage2\raytrace.cpp(236): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\wdcta\onedrive\desktop\kit308\assignment 1 submission william colbert 414747\raytracerass1\stage2\raytrace.cpp(364): warning C4018: '<': signed/unsigned mismatch
+c:\users\wdcta\onedrive\desktop\kit308\assignment 1 submission william colbert 414747\raytracerass1\stage2\raytrace.cpp(390): warning C4018: '<': signed/unsigned mismatch
+  Scene.cpp
+  Texturing.cpp
+  Generating code
+  All 497 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Stage2.vcxproj -> C:\Users\wdcta\OneDrive\Desktop\KIT308\Assignment 1 Submission William Colbert 414747\RayTracerAss1\Release\Stage2.exe

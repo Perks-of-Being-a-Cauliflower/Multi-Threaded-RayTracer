@@ -1,0 +1,7183 @@
+/////////////////////////////////////////
+// Sixth version of the scene file format
+// 
+// - It allows you to add comments like this one
+// - Syntax itself is hopefully self explanatory
+// - Name of the objects and attributes are defined inside the executable
+
+///////////////////////////////////////
+//    Global scene and viewpoint     //
+/////////////////////////////////////// 
+
+Scene 
+{
+	// make sure the version and the executable match !
+	Version.Major = 1;
+	Version.Minor = 5;
+
+	Camera.Position = -3.0, 15.0, -30.0;
+	Camera.Rotation = 30.0;
+	Camera.FieldOfView = 60.0;
+
+	// Image Exposure
+	Exposure = -2.5;
+	
+	Skybox.Material.Id = 0;
+
+	// Count the objects in the scene
+	NumberOfMaterials = 19;
+	NumberOfSpheres = 0;
+	NumberOfBoxes = 1150;
+	NumberOfLights = 2; 
+	NumberOfModels = 0;
+}
+
+
+
+
+///////////////////////////////////////
+//         List of lights            //
+/////////////////////////////////////// 
+
+Light0
+{
+  Position = 1000.0, 1000.0, -1000.0;
+  Intensity = 0.5, 0.5, 0.5;
+}
+Light1
+{
+  Position = 0.0, 5.0, -1000.0;
+  Intensity = 0.5, 0.5, 0.5;
+}
+
+
+///////////////////////////////////////
+//         List of materials         //
+/////////////////////////////////////// 
+Material0
+{
+   Type = gouraud;
+   //Reflection = 0.05;
+   Diffuse = 0.6, 0.6, 1;
+}
+Material1
+{
+   Type = gouraud;
+   Diffuse = 1, 0.8, 0.6;
+}
+Material2
+{
+   Type = gouraud;
+   Diffuse = 0.3333333, 0, 0;
+}
+Material3
+{
+   Type = gouraud;
+   Diffuse = 0.06666667, 0.06666667, 0.06666667;
+}
+Material4
+{
+   Type = gouraud;
+   Diffuse = 0.8666667, 0.8666667, 0.8666667;
+}
+Material5
+{
+   Type = gouraud;
+   Diffuse = 0.1333333, 0, 0;
+}
+Material6
+{
+   Type = gouraud;
+   Diffuse = 0.4666667, 0.4666667, 0.4666667;
+}
+Material7
+{
+   Type = gouraud;
+   Diffuse = 0.1333333, 0.1333333, 0.1333333;
+}
+Material8
+{
+   Type = gouraud;
+   Diffuse = 0.3333333, 0.3333333, 0.3333333;
+}
+Material9
+{
+   Type = gouraud;
+   Diffuse = 0.2666667, 0.2666667, 0.2666667;
+}
+Material10
+{
+   Type = gouraud;
+   Diffuse = 0, 0.6, 0.2;
+}
+Material11
+{
+   Type = gouraud;
+   Diffuse = 0, 0, 0.06666667;
+}
+Material12
+{
+   Type = gouraud;
+   Diffuse = 0.7333333, 0, 0;
+}
+Material13
+{
+   Type = gouraud;
+   Diffuse = 1, 0.4, 0;
+}
+Material14
+{
+   Type = gouraud;
+   Diffuse = 0.6, 0.4, 0.2;
+}
+Material15
+{
+   Type = gouraud;
+   Diffuse = 1, 0.6, 0.4;
+}
+Material16
+{
+   Type = gouraud;
+   Diffuse = 0.6666667, 0.6666667, 0.6666667;
+}
+Material17
+{
+   Type = gouraud;
+   Diffuse = 0.9333333, 0.9333333, 0.9333333;
+}
+
+Material18
+{
+   Type = checkerboard;
+
+   Diffuse = 0.65, 0.65, 1;
+   Diffuse2 = 0.55, 0.55, 1;
+   Size = 5;
+   Offset = 0, 3893343, 0;
+   Reflection = 0.1;
+}  
+
+///////////////////////////////////////
+//         List of models            //
+/////////////////////////////////////// 
+
+Model0
+{
+	Center = 0.0, 0.0, 0.0;
+	Size = 1000;
+	Normal = 0.0, 1.0, 0.0;
+	Material.Id = 0;
+
+	Triangles = 2;
+	Triangle0 = 
+		-1, 0, -1,
+		-1, 0, 1,
+		1, 0, -1;
+	Triangle1 = 
+		1, 0, -1,
+		-1, 0, 1,
+		1, 0, 1;
+}
+Model1
+{
+	Center = 0.0, 400.0, 400.0;
+	Size = 400;
+	Normal = 0.0, -1.0, 0.0;
+	Material.Id = 0;
+
+	Triangles = 2;
+	Triangle0 = 
+		-1, 0, -1,
+		1, 0, -1,
+		-1, 0, 1;
+	Triangle1 = 
+		-1, 0, 1,
+		1, 0, -1,
+		1, 0, 1;
+}
+Model2
+{
+	Center = -400.0, 0.0, 400.0;
+	Size = 400;
+	Normal = 1.0, 0.0, 0.0;
+	Material.Id = 1;
+
+	Triangles = 2;
+	Triangle0 = 
+		0, -1, -1,
+		0, 1, -1,
+		0, -1, 1;
+	Triangle1 = 
+		0, -1, 1,
+		0, 1, -1,
+		0, 1, 1;
+}
+Model3
+{
+	Center = 400.0, 0.0, 400.0;
+	Size = 400;
+	Normal = -1.0, 0.0, 0.0;
+	Material.Id = 2;
+
+	Triangles = 2;
+	Triangle0 = 
+		0, -1, -1,
+		0, -1, 1,
+		0, 1, -1;
+	Triangle1 = 
+		0, 1, -1,
+		0, -1, 1,
+		0, 1, 1;
+
+}
+Model4
+{
+	Center = 0.0, 0.0, 800.0;
+	Size = 400;
+	Normal = 0.0, 0.0, -1.0;
+	Material.Id = 0;
+
+	Triangles = 2;
+	Triangle0 = 
+		-1, -1, 0,
+		-1, 1, 0,
+		1, -1, 0;
+	Triangle1 = 
+		1, -1, 0,
+		-1, 1, 0,
+		1, 1, 0;
+}
+
+
+///////////////////////////////////////
+//         List of spheres           //
+/////////////////////////////////////// 
+Sphere0
+{
+  Center = -200.0, -250.0, 450.0;
+  Size = 150.0;
+  Material.Id = 2;
+}
+Sphere1
+{
+  Center = 200.0, -250.0, 350.0;
+  Size = 150.0;
+  Material.Id = 3;
+}
+
+///////////////////////////////////////
+//         List of boxes             //
+/////////////////////////////////////// 
+//Box0
+//{
+//  Point1 = -300.0, -350.0, 350.0;
+//  Point2 = -100.0, -150.0, 550.0;
+//  Material.Id = 3;
+//}
+
+//Box1
+//{
+//  Point1 = 50.0, -400.0, 200.0;
+//  Point2 = 350.0, -100.0, 500.0;
+//  Material.Id = 4;
+//}
+Box0
+{
+   Point1 = 0, 5, 3;
+   Point2 = 1, 6, 4;
+   Material.Id = 0;
+}
+Box1
+{
+   Point1 = 0, 6, 3;
+   Point2 = 1, 7, 4;
+   Material.Id = 0;
+}
+Box2
+{
+   Point1 = 0, 7, 2;
+   Point2 = 1, 8, 3;
+   Material.Id = 0;
+}
+Box3
+{
+   Point1 = 0, 7, 3;
+   Point2 = 1, 8, 4;
+   Material.Id = 0;
+}
+Box4
+{
+   Point1 = 0, 8, 2;
+   Point2 = 1, 9, 3;
+   Material.Id = 0;
+}
+Box5
+{
+   Point1 = 0, 9, 2;
+   Point2 = 1, 10, 3;
+   Material.Id = 0;
+}
+Box6
+{
+   Point1 = 1, 2, 2;
+   Point2 = 2, 3, 3;
+   Material.Id = 1;
+}
+Box7
+{
+   Point1 = 1, 3, 2;
+   Point2 = 2, 4, 3;
+   Material.Id = 2;
+}
+Box8
+{
+   Point1 = 1, 4, 1;
+   Point2 = 2, 5, 2;
+   Material.Id = 3;
+}
+Box9
+{
+   Point1 = 1, 4, 2;
+   Point2 = 2, 5, 3;
+   Material.Id = 2;
+}
+Box10
+{
+   Point1 = 1, 4, 4;
+   Point2 = 2, 5, 5;
+   Material.Id = 0;
+}
+Box11
+{
+   Point1 = 1, 5, 1;
+   Point2 = 2, 6, 2;
+   Material.Id = 3;
+}
+Box12
+{
+   Point1 = 1, 5, 2;
+   Point2 = 2, 6, 3;
+   Material.Id = 2;
+}
+Box13
+{
+   Point1 = 1, 5, 3;
+   Point2 = 2, 6, 4;
+   Material.Id = 3;
+}
+Box14
+{
+   Point1 = 1, 5, 4;
+   Point2 = 2, 6, 5;
+   Material.Id = 3;
+}
+Box15
+{
+   Point1 = 1, 6, 2;
+   Point2 = 2, 7, 3;
+   Material.Id = 3;
+}
+Box16
+{
+   Point1 = 1, 6, 3;
+   Point2 = 2, 7, 4;
+   Material.Id = 3;
+}
+Box17
+{
+   Point1 = 1, 7, 1;
+   Point2 = 2, 8, 2;
+   Material.Id = 3;
+}
+Box18
+{
+   Point1 = 1, 7, 2;
+   Point2 = 2, 8, 3;
+   Material.Id = 4;
+}
+Box19
+{
+   Point1 = 1, 7, 3;
+   Point2 = 2, 8, 4;
+   Material.Id = 3;
+}
+Box20
+{
+   Point1 = 1, 8, 2;
+   Point2 = 2, 9, 3;
+   Material.Id = 3;
+}
+Box21
+{
+   Point1 = 1, 8, 3;
+   Point2 = 2, 9, 4;
+   Material.Id = 3;
+}
+Box22
+{
+   Point1 = 1, 9, 1;
+   Point2 = 2, 10, 2;
+   Material.Id = 3;
+}
+Box23
+{
+   Point1 = 1, 9, 2;
+   Point2 = 2, 10, 3;
+   Material.Id = 3;
+}
+Box24
+{
+   Point1 = 1, 9, 3;
+   Point2 = 2, 10, 4;
+   Material.Id = 3;
+}
+Box25
+{
+   Point1 = 1, 10, 2;
+   Point2 = 2, 11, 3;
+   Material.Id = 0;
+}
+Box26
+{
+   Point1 = 2, 1, 1;
+   Point2 = 3, 2, 2;
+   Material.Id = 5;
+}
+Box27
+{
+   Point1 = 2, 1, 2;
+   Point2 = 3, 2, 3;
+   Material.Id = 5;
+}
+Box28
+{
+   Point1 = 2, 1, 3;
+   Point2 = 3, 2, 4;
+   Material.Id = 5;
+}
+Box29
+{
+   Point1 = 2, 2, 0;
+   Point2 = 3, 3, 1;
+   Material.Id = 5;
+}
+Box30
+{
+   Point1 = 2, 2, 1;
+   Point2 = 3, 3, 2;
+   Material.Id = 5;
+}
+Box31
+{
+   Point1 = 2, 2, 2;
+   Point2 = 3, 3, 3;
+   Material.Id = 4;
+}
+Box32
+{
+   Point1 = 2, 2, 3;
+   Point2 = 3, 3, 4;
+   Material.Id = 5;
+}
+Box33
+{
+   Point1 = 2, 2, 4;
+   Point2 = 3, 3, 5;
+   Material.Id = 5;
+}
+Box34
+{
+   Point1 = 2, 3, 0;
+   Point2 = 3, 4, 1;
+   Material.Id = 5;
+}
+Box35
+{
+   Point1 = 2, 3, 1;
+   Point2 = 3, 4, 2;
+   Material.Id = 5;
+}
+Box36
+{
+   Point1 = 2, 3, 2;
+   Point2 = 3, 4, 3;
+   Material.Id = 4;
+}
+Box37
+{
+   Point1 = 2, 3, 3;
+   Point2 = 3, 4, 4;
+   Material.Id = 5;
+}
+Box38
+{
+   Point1 = 2, 3, 4;
+   Point2 = 3, 4, 5;
+   Material.Id = 5;
+}
+Box39
+{
+   Point1 = 2, 4, 0;
+   Point2 = 3, 5, 1;
+   Material.Id = 5;
+}
+Box40
+{
+   Point1 = 2, 4, 1;
+   Point2 = 3, 5, 2;
+   Material.Id = 6;
+}
+Box41
+{
+   Point1 = 2, 4, 2;
+   Point2 = 3, 5, 3;
+   Material.Id = 4;
+}
+Box42
+{
+   Point1 = 2, 4, 3;
+   Point2 = 3, 5, 4;
+   Material.Id = 5;
+}
+Box43
+{
+   Point1 = 2, 4, 4;
+   Point2 = 3, 5, 5;
+   Material.Id = 5;
+}
+Box44
+{
+   Point1 = 2, 5, 0;
+   Point2 = 3, 6, 1;
+   Material.Id = 5;
+}
+Box45
+{
+   Point1 = 2, 5, 1;
+   Point2 = 3, 6, 2;
+   Material.Id = 6;
+}
+Box46
+{
+   Point1 = 2, 5, 2;
+   Point2 = 3, 6, 3;
+   Material.Id = 4;
+}
+Box47
+{
+   Point1 = 2, 5, 3;
+   Point2 = 3, 6, 4;
+   Material.Id = 6;
+}
+Box48
+{
+   Point1 = 2, 5, 4;
+   Point2 = 3, 6, 5;
+   Material.Id = 5;
+}
+Box49
+{
+   Point1 = 2, 6, 1;
+   Point2 = 3, 7, 2;
+   Material.Id = 4;
+}
+Box50
+{
+   Point1 = 2, 6, 2;
+   Point2 = 3, 7, 3;
+   Material.Id = 4;
+}
+Box51
+{
+   Point1 = 2, 6, 3;
+   Point2 = 3, 7, 4;
+   Material.Id = 4;
+}
+Box52
+{
+   Point1 = 2, 6, 4;
+   Point2 = 3, 7, 5;
+   Material.Id = 3;
+}
+Box53
+{
+   Point1 = 2, 7, 1;
+   Point2 = 3, 8, 2;
+   Material.Id = 4;
+}
+Box54
+{
+   Point1 = 2, 7, 2;
+   Point2 = 3, 8, 3;
+   Material.Id = 4;
+}
+Box55
+{
+   Point1 = 2, 7, 3;
+   Point2 = 3, 8, 4;
+   Material.Id = 4;
+}
+Box56
+{
+   Point1 = 2, 7, 4;
+   Point2 = 3, 8, 5;
+   Material.Id = 3;
+}
+Box57
+{
+   Point1 = 2, 8, 1;
+   Point2 = 3, 9, 2;
+   Material.Id = 4;
+}
+Box58
+{
+   Point1 = 2, 8, 2;
+   Point2 = 3, 9, 3;
+   Material.Id = 4;
+}
+Box59
+{
+   Point1 = 2, 8, 3;
+   Point2 = 3, 9, 4;
+   Material.Id = 4;
+}
+Box60
+{
+   Point1 = 2, 8, 4;
+   Point2 = 3, 9, 5;
+   Material.Id = 3;
+}
+Box61
+{
+   Point1 = 2, 9, 1;
+   Point2 = 3, 10, 2;
+   Material.Id = 4;
+}
+Box62
+{
+   Point1 = 2, 9, 2;
+   Point2 = 3, 10, 3;
+   Material.Id = 4;
+}
+Box63
+{
+   Point1 = 2, 9, 3;
+   Point2 = 3, 10, 4;
+   Material.Id = 4;
+}
+Box64
+{
+   Point1 = 2, 9, 4;
+   Point2 = 3, 10, 5;
+   Material.Id = 3;
+}
+Box65
+{
+   Point1 = 2, 10, 1;
+   Point2 = 3, 11, 2;
+   Material.Id = 3;
+}
+Box66
+{
+   Point1 = 2, 10, 2;
+   Point2 = 3, 11, 3;
+   Material.Id = 3;
+}
+Box67
+{
+   Point1 = 2, 10, 3;
+   Point2 = 3, 11, 4;
+   Material.Id = 3;
+}
+Box68
+{
+   Point1 = 3, 0, 2;
+   Point2 = 4, 1, 3;
+   Material.Id = 7;
+}
+Box69
+{
+   Point1 = 3, 1, 1;
+   Point2 = 4, 2, 2;
+   Material.Id = 5;
+}
+Box70
+{
+   Point1 = 3, 1, 2;
+   Point2 = 4, 2, 3;
+   Material.Id = 3;
+}
+Box71
+{
+   Point1 = 3, 1, 3;
+   Point2 = 4, 2, 4;
+   Material.Id = 3;
+}
+Box72
+{
+   Point1 = 3, 2, 0;
+   Point2 = 4, 3, 1;
+   Material.Id = 5;
+}
+Box73
+{
+   Point1 = 3, 2, 1;
+   Point2 = 4, 3, 2;
+   Material.Id = 4;
+}
+Box74
+{
+   Point1 = 3, 2, 2;
+   Point2 = 4, 3, 3;
+   Material.Id = 4;
+}
+Box75
+{
+   Point1 = 3, 2, 3;
+   Point2 = 4, 3, 4;
+   Material.Id = 4;
+}
+Box76
+{
+   Point1 = 3, 2, 4;
+   Point2 = 4, 3, 5;
+   Material.Id = 5;
+}
+Box77
+{
+   Point1 = 3, 3, 0;
+   Point2 = 4, 4, 1;
+   Material.Id = 5;
+}
+Box78
+{
+   Point1 = 3, 3, 1;
+   Point2 = 4, 4, 2;
+   Material.Id = 4;
+}
+Box79
+{
+   Point1 = 3, 3, 2;
+   Point2 = 4, 4, 3;
+   Material.Id = 4;
+}
+Box80
+{
+   Point1 = 3, 3, 3;
+   Point2 = 4, 4, 4;
+   Material.Id = 4;
+}
+Box81
+{
+   Point1 = 3, 3, 4;
+   Point2 = 4, 4, 5;
+   Material.Id = 5;
+}
+Box82
+{
+   Point1 = 3, 4, 0;
+   Point2 = 4, 5, 1;
+   Material.Id = 5;
+}
+Box83
+{
+   Point1 = 3, 4, 1;
+   Point2 = 4, 5, 2;
+   Material.Id = 4;
+}
+Box84
+{
+   Point1 = 3, 4, 2;
+   Point2 = 4, 5, 3;
+   Material.Id = 4;
+}
+Box85
+{
+   Point1 = 3, 4, 3;
+   Point2 = 4, 5, 4;
+   Material.Id = 4;
+}
+Box86
+{
+   Point1 = 3, 4, 4;
+   Point2 = 4, 5, 5;
+   Material.Id = 5;
+}
+Box87
+{
+   Point1 = 3, 5, 0;
+   Point2 = 4, 6, 1;
+   Material.Id = 5;
+}
+Box88
+{
+   Point1 = 3, 5, 1;
+   Point2 = 4, 6, 2;
+   Material.Id = 4;
+}
+Box89
+{
+   Point1 = 3, 5, 2;
+   Point2 = 4, 6, 3;
+   Material.Id = 4;
+}
+Box90
+{
+   Point1 = 3, 5, 3;
+   Point2 = 4, 6, 4;
+   Material.Id = 4;
+}
+Box91
+{
+   Point1 = 3, 5, 4;
+   Point2 = 4, 6, 5;
+   Material.Id = 6;
+}
+Box92
+{
+   Point1 = 3, 5, 5;
+   Point2 = 4, 6, 6;
+   Material.Id = 3;
+}
+Box93
+{
+   Point1 = 3, 5, 6;
+   Point2 = 4, 6, 7;
+   Material.Id = 3;
+}
+Box94
+{
+   Point1 = 3, 6, 1;
+   Point2 = 4, 7, 2;
+   Material.Id = 8;
+}
+Box95
+{
+   Point1 = 3, 6, 2;
+   Point2 = 4, 7, 3;
+   Material.Id = 4;
+}
+Box96
+{
+   Point1 = 3, 6, 3;
+   Point2 = 4, 7, 4;
+   Material.Id = 4;
+}
+Box97
+{
+   Point1 = 3, 6, 4;
+   Point2 = 4, 7, 5;
+   Material.Id = 4;
+}
+Box98
+{
+   Point1 = 3, 6, 5;
+   Point2 = 4, 7, 6;
+   Material.Id = 3;
+}
+Box99
+{
+   Point1 = 3, 6, 6;
+   Point2 = 4, 7, 7;
+   Material.Id = 3;
+}
+Box100
+{
+   Point1 = 3, 7, 1;
+   Point2 = 4, 8, 2;
+   Material.Id = 3;
+}
+Box101
+{
+   Point1 = 3, 7, 2;
+   Point2 = 4, 8, 3;
+   Material.Id = 4;
+}
+Box102
+{
+   Point1 = 3, 7, 3;
+   Point2 = 4, 8, 4;
+   Material.Id = 4;
+}
+Box103
+{
+   Point1 = 3, 7, 4;
+   Point2 = 4, 8, 5;
+   Material.Id = 4;
+}
+Box104
+{
+   Point1 = 3, 7, 5;
+   Point2 = 4, 8, 6;
+   Material.Id = 3;
+}
+Box105
+{
+   Point1 = 3, 8, 1;
+   Point2 = 4, 9, 2;
+   Material.Id = 8;
+}
+Box106
+{
+   Point1 = 3, 8, 2;
+   Point2 = 4, 9, 3;
+   Material.Id = 4;
+}
+Box107
+{
+   Point1 = 3, 8, 3;
+   Point2 = 4, 9, 4;
+   Material.Id = 4;
+}
+Box108
+{
+   Point1 = 3, 8, 4;
+   Point2 = 4, 9, 5;
+   Material.Id = 4;
+}
+Box109
+{
+   Point1 = 3, 8, 5;
+   Point2 = 4, 9, 6;
+   Material.Id = 3;
+}
+Box110
+{
+   Point1 = 3, 9, 1;
+   Point2 = 4, 10, 2;
+   Material.Id = 4;
+}
+Box111
+{
+   Point1 = 3, 9, 2;
+   Point2 = 4, 10, 3;
+   Material.Id = 4;
+}
+Box112
+{
+   Point1 = 3, 9, 3;
+   Point2 = 4, 10, 4;
+   Material.Id = 4;
+}
+Box113
+{
+   Point1 = 3, 9, 4;
+   Point2 = 4, 10, 5;
+   Material.Id = 4;
+}
+Box114
+{
+   Point1 = 3, 9, 5;
+   Point2 = 4, 10, 6;
+   Material.Id = 3;
+}
+Box115
+{
+   Point1 = 3, 10, 2;
+   Point2 = 4, 11, 3;
+   Material.Id = 3;
+}
+Box116
+{
+   Point1 = 3, 10, 3;
+   Point2 = 4, 11, 4;
+   Material.Id = 3;
+}
+Box117
+{
+   Point1 = 3, 10, 4;
+   Point2 = 4, 11, 5;
+   Material.Id = 3;
+}
+Box118
+{
+   Point1 = 4, 1, 1;
+   Point2 = 5, 2, 2;
+   Material.Id = 5;
+}
+Box119
+{
+   Point1 = 4, 2, 0;
+   Point2 = 5, 3, 1;
+   Material.Id = 5;
+}
+Box120
+{
+   Point1 = 4, 2, 1;
+   Point2 = 5, 3, 2;
+   Material.Id = 3;
+}
+Box121
+{
+   Point1 = 4, 2, 2;
+   Point2 = 5, 3, 3;
+   Material.Id = 3;
+}
+Box122
+{
+   Point1 = 4, 2, 3;
+   Point2 = 5, 3, 4;
+   Material.Id = 3;
+}
+Box123
+{
+   Point1 = 4, 2, 4;
+   Point2 = 5, 3, 5;
+   Material.Id = 5;
+}
+Box124
+{
+   Point1 = 4, 3, 0;
+   Point2 = 5, 4, 1;
+   Material.Id = 5;
+}
+Box125
+{
+   Point1 = 4, 3, 1;
+   Point2 = 5, 4, 2;
+   Material.Id = 4;
+}
+Box126
+{
+   Point1 = 4, 3, 2;
+   Point2 = 5, 4, 3;
+   Material.Id = 4;
+}
+Box127
+{
+   Point1 = 4, 3, 3;
+   Point2 = 5, 4, 4;
+   Material.Id = 4;
+}
+Box128
+{
+   Point1 = 4, 3, 4;
+   Point2 = 5, 4, 5;
+   Material.Id = 5;
+}
+Box129
+{
+   Point1 = 4, 4, 0;
+   Point2 = 5, 5, 1;
+   Material.Id = 5;
+}
+Box130
+{
+   Point1 = 4, 4, 1;
+   Point2 = 5, 5, 2;
+   Material.Id = 4;
+}
+Box131
+{
+   Point1 = 4, 4, 2;
+   Point2 = 5, 5, 3;
+   Material.Id = 4;
+}
+Box132
+{
+   Point1 = 4, 4, 3;
+   Point2 = 5, 5, 4;
+   Material.Id = 4;
+}
+Box133
+{
+   Point1 = 4, 4, 4;
+   Point2 = 5, 5, 5;
+   Material.Id = 5;
+}
+Box134
+{
+   Point1 = 4, 5, 1;
+   Point2 = 5, 6, 2;
+   Material.Id = 4;
+}
+Box135
+{
+   Point1 = 4, 5, 2;
+   Point2 = 5, 6, 3;
+   Material.Id = 4;
+}
+Box136
+{
+   Point1 = 4, 5, 3;
+   Point2 = 5, 6, 4;
+   Material.Id = 4;
+}
+Box137
+{
+   Point1 = 4, 5, 4;
+   Point2 = 5, 6, 5;
+   Material.Id = 5;
+}
+Box138
+{
+   Point1 = 4, 6, 1;
+   Point2 = 5, 7, 2;
+   Material.Id = 4;
+}
+Box139
+{
+   Point1 = 4, 6, 2;
+   Point2 = 5, 7, 3;
+   Material.Id = 4;
+}
+Box140
+{
+   Point1 = 4, 6, 3;
+   Point2 = 5, 7, 4;
+   Material.Id = 4;
+}
+Box141
+{
+   Point1 = 4, 6, 4;
+   Point2 = 5, 7, 5;
+   Material.Id = 4;
+}
+Box142
+{
+   Point1 = 4, 6, 5;
+   Point2 = 5, 7, 6;
+   Material.Id = 3;
+}
+Box143
+{
+   Point1 = 4, 6, 6;
+   Point2 = 5, 7, 7;
+   Material.Id = 3;
+}
+Box144
+{
+   Point1 = 4, 7, 1;
+   Point2 = 5, 8, 2;
+   Material.Id = 4;
+}
+Box145
+{
+   Point1 = 4, 7, 2;
+   Point2 = 5, 8, 3;
+   Material.Id = 4;
+}
+Box146
+{
+   Point1 = 4, 7, 3;
+   Point2 = 5, 8, 4;
+   Material.Id = 4;
+}
+Box147
+{
+   Point1 = 4, 7, 4;
+   Point2 = 5, 8, 5;
+   Material.Id = 4;
+}
+Box148
+{
+   Point1 = 4, 7, 5;
+   Point2 = 5, 8, 6;
+   Material.Id = 3;
+}
+Box149
+{
+   Point1 = 4, 7, 6;
+   Point2 = 5, 8, 7;
+   Material.Id = 3;
+}
+Box150
+{
+   Point1 = 4, 8, 1;
+   Point2 = 5, 9, 2;
+   Material.Id = 4;
+}
+Box151
+{
+   Point1 = 4, 8, 2;
+   Point2 = 5, 9, 3;
+   Material.Id = 4;
+}
+Box152
+{
+   Point1 = 4, 8, 3;
+   Point2 = 5, 9, 4;
+   Material.Id = 4;
+}
+Box153
+{
+   Point1 = 4, 8, 4;
+   Point2 = 5, 9, 5;
+   Material.Id = 4;
+}
+Box154
+{
+   Point1 = 4, 8, 5;
+   Point2 = 5, 9, 6;
+   Material.Id = 3;
+}
+Box155
+{
+   Point1 = 4, 9, 1;
+   Point2 = 5, 10, 2;
+   Material.Id = 4;
+}
+Box156
+{
+   Point1 = 4, 9, 2;
+   Point2 = 5, 10, 3;
+   Material.Id = 4;
+}
+Box157
+{
+   Point1 = 4, 9, 3;
+   Point2 = 5, 10, 4;
+   Material.Id = 4;
+}
+Box158
+{
+   Point1 = 4, 9, 4;
+   Point2 = 5, 10, 5;
+   Material.Id = 4;
+}
+Box159
+{
+   Point1 = 4, 9, 5;
+   Point2 = 5, 10, 6;
+   Material.Id = 3;
+}
+Box160
+{
+   Point1 = 4, 10, 2;
+   Point2 = 5, 11, 3;
+   Material.Id = 3;
+}
+Box161
+{
+   Point1 = 4, 10, 3;
+   Point2 = 5, 11, 4;
+   Material.Id = 3;
+}
+Box162
+{
+   Point1 = 4, 10, 4;
+   Point2 = 5, 11, 5;
+   Material.Id = 3;
+}
+Box163
+{
+   Point1 = 5, 1, 1;
+   Point2 = 6, 2, 2;
+   Material.Id = 5;
+}
+Box164
+{
+   Point1 = 5, 2, 0;
+   Point2 = 6, 3, 1;
+   Material.Id = 5;
+}
+Box165
+{
+   Point1 = 5, 2, 1;
+   Point2 = 6, 3, 2;
+   Material.Id = 3;
+}
+Box166
+{
+   Point1 = 5, 2, 2;
+   Point2 = 6, 3, 3;
+   Material.Id = 3;
+}
+Box167
+{
+   Point1 = 5, 2, 3;
+   Point2 = 6, 3, 4;
+   Material.Id = 3;
+}
+Box168
+{
+   Point1 = 5, 2, 4;
+   Point2 = 6, 3, 5;
+   Material.Id = 5;
+}
+Box169
+{
+   Point1 = 5, 3, 0;
+   Point2 = 6, 4, 1;
+   Material.Id = 5;
+}
+Box170
+{
+   Point1 = 5, 3, 1;
+   Point2 = 6, 4, 2;
+   Material.Id = 4;
+}
+Box171
+{
+   Point1 = 5, 3, 2;
+   Point2 = 6, 4, 3;
+   Material.Id = 4;
+}
+Box172
+{
+   Point1 = 5, 3, 3;
+   Point2 = 6, 4, 4;
+   Material.Id = 4;
+}
+Box173
+{
+   Point1 = 5, 3, 4;
+   Point2 = 6, 4, 5;
+   Material.Id = 5;
+}
+Box174
+{
+   Point1 = 5, 4, 0;
+   Point2 = 6, 5, 1;
+   Material.Id = 5;
+}
+Box175
+{
+   Point1 = 5, 4, 1;
+   Point2 = 6, 5, 2;
+   Material.Id = 4;
+}
+Box176
+{
+   Point1 = 5, 4, 2;
+   Point2 = 6, 5, 3;
+   Material.Id = 4;
+}
+Box177
+{
+   Point1 = 5, 4, 3;
+   Point2 = 6, 5, 4;
+   Material.Id = 4;
+}
+Box178
+{
+   Point1 = 5, 4, 4;
+   Point2 = 6, 5, 5;
+   Material.Id = 5;
+}
+Box179
+{
+   Point1 = 5, 5, 1;
+   Point2 = 6, 6, 2;
+   Material.Id = 4;
+}
+Box180
+{
+   Point1 = 5, 5, 2;
+   Point2 = 6, 6, 3;
+   Material.Id = 4;
+}
+Box181
+{
+   Point1 = 5, 5, 3;
+   Point2 = 6, 6, 4;
+   Material.Id = 4;
+}
+Box182
+{
+   Point1 = 5, 5, 4;
+   Point2 = 6, 6, 5;
+   Material.Id = 5;
+}
+Box183
+{
+   Point1 = 5, 6, 1;
+   Point2 = 6, 7, 2;
+   Material.Id = 4;
+}
+Box184
+{
+   Point1 = 5, 6, 2;
+   Point2 = 6, 7, 3;
+   Material.Id = 4;
+}
+Box185
+{
+   Point1 = 5, 6, 3;
+   Point2 = 6, 7, 4;
+   Material.Id = 4;
+}
+Box186
+{
+   Point1 = 5, 6, 4;
+   Point2 = 6, 7, 5;
+   Material.Id = 4;
+}
+Box187
+{
+   Point1 = 5, 6, 5;
+   Point2 = 6, 7, 6;
+   Material.Id = 3;
+}
+Box188
+{
+   Point1 = 5, 6, 6;
+   Point2 = 6, 7, 7;
+   Material.Id = 3;
+}
+Box189
+{
+   Point1 = 5, 7, 1;
+   Point2 = 6, 8, 2;
+   Material.Id = 4;
+}
+Box190
+{
+   Point1 = 5, 7, 2;
+   Point2 = 6, 8, 3;
+   Material.Id = 4;
+}
+Box191
+{
+   Point1 = 5, 7, 3;
+   Point2 = 6, 8, 4;
+   Material.Id = 4;
+}
+Box192
+{
+   Point1 = 5, 7, 4;
+   Point2 = 6, 8, 5;
+   Material.Id = 4;
+}
+Box193
+{
+   Point1 = 5, 7, 5;
+   Point2 = 6, 8, 6;
+   Material.Id = 3;
+}
+Box194
+{
+   Point1 = 5, 7, 6;
+   Point2 = 6, 8, 7;
+   Material.Id = 3;
+}
+Box195
+{
+   Point1 = 5, 8, 1;
+   Point2 = 6, 9, 2;
+   Material.Id = 4;
+}
+Box196
+{
+   Point1 = 5, 8, 2;
+   Point2 = 6, 9, 3;
+   Material.Id = 4;
+}
+Box197
+{
+   Point1 = 5, 8, 3;
+   Point2 = 6, 9, 4;
+   Material.Id = 4;
+}
+Box198
+{
+   Point1 = 5, 8, 4;
+   Point2 = 6, 9, 5;
+   Material.Id = 4;
+}
+Box199
+{
+   Point1 = 5, 8, 5;
+   Point2 = 6, 9, 6;
+   Material.Id = 3;
+}
+Box200
+{
+   Point1 = 5, 9, 1;
+   Point2 = 6, 10, 2;
+   Material.Id = 4;
+}
+Box201
+{
+   Point1 = 5, 9, 2;
+   Point2 = 6, 10, 3;
+   Material.Id = 4;
+}
+Box202
+{
+   Point1 = 5, 9, 3;
+   Point2 = 6, 10, 4;
+   Material.Id = 4;
+}
+Box203
+{
+   Point1 = 5, 9, 4;
+   Point2 = 6, 10, 5;
+   Material.Id = 4;
+}
+Box204
+{
+   Point1 = 5, 9, 5;
+   Point2 = 6, 10, 6;
+   Material.Id = 3;
+}
+Box205
+{
+   Point1 = 5, 10, 2;
+   Point2 = 6, 11, 3;
+   Material.Id = 3;
+}
+Box206
+{
+   Point1 = 5, 10, 3;
+   Point2 = 6, 11, 4;
+   Material.Id = 3;
+}
+Box207
+{
+   Point1 = 5, 10, 4;
+   Point2 = 6, 11, 5;
+   Material.Id = 3;
+}
+Box208
+{
+   Point1 = 6, 0, 2;
+   Point2 = 7, 1, 3;
+   Material.Id = 7;
+}
+Box209
+{
+   Point1 = 6, 1, 1;
+   Point2 = 7, 2, 2;
+   Material.Id = 5;
+}
+Box210
+{
+   Point1 = 6, 1, 2;
+   Point2 = 7, 2, 3;
+   Material.Id = 3;
+}
+Box211
+{
+   Point1 = 6, 1, 3;
+   Point2 = 7, 2, 4;
+   Material.Id = 3;
+}
+Box212
+{
+   Point1 = 6, 2, 0;
+   Point2 = 7, 3, 1;
+   Material.Id = 5;
+}
+Box213
+{
+   Point1 = 6, 2, 1;
+   Point2 = 7, 3, 2;
+   Material.Id = 4;
+}
+Box214
+{
+   Point1 = 6, 2, 2;
+   Point2 = 7, 3, 3;
+   Material.Id = 4;
+}
+Box215
+{
+   Point1 = 6, 2, 3;
+   Point2 = 7, 3, 4;
+   Material.Id = 4;
+}
+Box216
+{
+   Point1 = 6, 2, 4;
+   Point2 = 7, 3, 5;
+   Material.Id = 5;
+}
+Box217
+{
+   Point1 = 6, 3, 0;
+   Point2 = 7, 4, 1;
+   Material.Id = 5;
+}
+Box218
+{
+   Point1 = 6, 3, 1;
+   Point2 = 7, 4, 2;
+   Material.Id = 4;
+}
+Box219
+{
+   Point1 = 6, 3, 2;
+   Point2 = 7, 4, 3;
+   Material.Id = 4;
+}
+Box220
+{
+   Point1 = 6, 3, 3;
+   Point2 = 7, 4, 4;
+   Material.Id = 4;
+}
+Box221
+{
+   Point1 = 6, 3, 4;
+   Point2 = 7, 4, 5;
+   Material.Id = 5;
+}
+Box222
+{
+   Point1 = 6, 4, 0;
+   Point2 = 7, 5, 1;
+   Material.Id = 5;
+}
+Box223
+{
+   Point1 = 6, 4, 1;
+   Point2 = 7, 5, 2;
+   Material.Id = 4;
+}
+Box224
+{
+   Point1 = 6, 4, 2;
+   Point2 = 7, 5, 3;
+   Material.Id = 4;
+}
+Box225
+{
+   Point1 = 6, 4, 3;
+   Point2 = 7, 5, 4;
+   Material.Id = 4;
+}
+Box226
+{
+   Point1 = 6, 4, 4;
+   Point2 = 7, 5, 5;
+   Material.Id = 5;
+}
+Box227
+{
+   Point1 = 6, 5, 0;
+   Point2 = 7, 6, 1;
+   Material.Id = 5;
+}
+Box228
+{
+   Point1 = 6, 5, 1;
+   Point2 = 7, 6, 2;
+   Material.Id = 4;
+}
+Box229
+{
+   Point1 = 6, 5, 2;
+   Point2 = 7, 6, 3;
+   Material.Id = 4;
+}
+Box230
+{
+   Point1 = 6, 5, 3;
+   Point2 = 7, 6, 4;
+   Material.Id = 4;
+}
+Box231
+{
+   Point1 = 6, 5, 4;
+   Point2 = 7, 6, 5;
+   Material.Id = 6;
+}
+Box232
+{
+   Point1 = 6, 5, 5;
+   Point2 = 7, 6, 6;
+   Material.Id = 3;
+}
+Box233
+{
+   Point1 = 6, 5, 6;
+   Point2 = 7, 6, 7;
+   Material.Id = 3;
+}
+Box234
+{
+   Point1 = 6, 6, 1;
+   Point2 = 7, 7, 2;
+   Material.Id = 8;
+}
+Box235
+{
+   Point1 = 6, 6, 2;
+   Point2 = 7, 7, 3;
+   Material.Id = 4;
+}
+Box236
+{
+   Point1 = 6, 6, 3;
+   Point2 = 7, 7, 4;
+   Material.Id = 4;
+}
+Box237
+{
+   Point1 = 6, 6, 4;
+   Point2 = 7, 7, 5;
+   Material.Id = 4;
+}
+Box238
+{
+   Point1 = 6, 6, 5;
+   Point2 = 7, 7, 6;
+   Material.Id = 3;
+}
+Box239
+{
+   Point1 = 6, 6, 6;
+   Point2 = 7, 7, 7;
+   Material.Id = 3;
+}
+Box240
+{
+   Point1 = 6, 7, 1;
+   Point2 = 7, 8, 2;
+   Material.Id = 3;
+}
+Box241
+{
+   Point1 = 6, 7, 2;
+   Point2 = 7, 8, 3;
+   Material.Id = 4;
+}
+Box242
+{
+   Point1 = 6, 7, 3;
+   Point2 = 7, 8, 4;
+   Material.Id = 4;
+}
+Box243
+{
+   Point1 = 6, 7, 4;
+   Point2 = 7, 8, 5;
+   Material.Id = 4;
+}
+Box244
+{
+   Point1 = 6, 7, 5;
+   Point2 = 7, 8, 6;
+   Material.Id = 3;
+}
+Box245
+{
+   Point1 = 6, 8, 1;
+   Point2 = 7, 9, 2;
+   Material.Id = 8;
+}
+Box246
+{
+   Point1 = 6, 8, 2;
+   Point2 = 7, 9, 3;
+   Material.Id = 4;
+}
+Box247
+{
+   Point1 = 6, 8, 3;
+   Point2 = 7, 9, 4;
+   Material.Id = 4;
+}
+Box248
+{
+   Point1 = 6, 8, 4;
+   Point2 = 7, 9, 5;
+   Material.Id = 4;
+}
+Box249
+{
+   Point1 = 6, 8, 5;
+   Point2 = 7, 9, 6;
+   Material.Id = 3;
+}
+Box250
+{
+   Point1 = 6, 9, 1;
+   Point2 = 7, 10, 2;
+   Material.Id = 4;
+}
+Box251
+{
+   Point1 = 6, 9, 2;
+   Point2 = 7, 10, 3;
+   Material.Id = 4;
+}
+Box252
+{
+   Point1 = 6, 9, 3;
+   Point2 = 7, 10, 4;
+   Material.Id = 4;
+}
+Box253
+{
+   Point1 = 6, 9, 4;
+   Point2 = 7, 10, 5;
+   Material.Id = 4;
+}
+Box254
+{
+   Point1 = 6, 9, 5;
+   Point2 = 7, 10, 6;
+   Material.Id = 3;
+}
+Box255
+{
+   Point1 = 6, 10, 2;
+   Point2 = 7, 11, 3;
+   Material.Id = 3;
+}
+Box256
+{
+   Point1 = 6, 10, 3;
+   Point2 = 7, 11, 4;
+   Material.Id = 3;
+}
+Box257
+{
+   Point1 = 6, 10, 4;
+   Point2 = 7, 11, 5;
+   Material.Id = 3;
+}
+Box258
+{
+   Point1 = 7, 1, 1;
+   Point2 = 8, 2, 2;
+   Material.Id = 5;
+}
+Box259
+{
+   Point1 = 7, 1, 2;
+   Point2 = 8, 2, 3;
+   Material.Id = 5;
+}
+Box260
+{
+   Point1 = 7, 1, 3;
+   Point2 = 8, 2, 4;
+   Material.Id = 5;
+}
+Box261
+{
+   Point1 = 7, 2, 0;
+   Point2 = 8, 3, 1;
+   Material.Id = 5;
+}
+Box262
+{
+   Point1 = 7, 2, 1;
+   Point2 = 8, 3, 2;
+   Material.Id = 5;
+}
+Box263
+{
+   Point1 = 7, 2, 2;
+   Point2 = 8, 3, 3;
+   Material.Id = 4;
+}
+Box264
+{
+   Point1 = 7, 2, 3;
+   Point2 = 8, 3, 4;
+   Material.Id = 5;
+}
+Box265
+{
+   Point1 = 7, 2, 4;
+   Point2 = 8, 3, 5;
+   Material.Id = 5;
+}
+Box266
+{
+   Point1 = 7, 3, 0;
+   Point2 = 8, 4, 1;
+   Material.Id = 5;
+}
+Box267
+{
+   Point1 = 7, 3, 1;
+   Point2 = 8, 4, 2;
+   Material.Id = 5;
+}
+Box268
+{
+   Point1 = 7, 3, 2;
+   Point2 = 8, 4, 3;
+   Material.Id = 4;
+}
+Box269
+{
+   Point1 = 7, 3, 3;
+   Point2 = 8, 4, 4;
+   Material.Id = 5;
+}
+Box270
+{
+   Point1 = 7, 3, 4;
+   Point2 = 8, 4, 5;
+   Material.Id = 5;
+}
+Box271
+{
+   Point1 = 7, 4, 0;
+   Point2 = 8, 5, 1;
+   Material.Id = 5;
+}
+Box272
+{
+   Point1 = 7, 4, 1;
+   Point2 = 8, 5, 2;
+   Material.Id = 6;
+}
+Box273
+{
+   Point1 = 7, 4, 2;
+   Point2 = 8, 5, 3;
+   Material.Id = 4;
+}
+Box274
+{
+   Point1 = 7, 4, 3;
+   Point2 = 8, 5, 4;
+   Material.Id = 5;
+}
+Box275
+{
+   Point1 = 7, 4, 4;
+   Point2 = 8, 5, 5;
+   Material.Id = 5;
+}
+Box276
+{
+   Point1 = 7, 5, 0;
+   Point2 = 8, 6, 1;
+   Material.Id = 5;
+}
+Box277
+{
+   Point1 = 7, 5, 1;
+   Point2 = 8, 6, 2;
+   Material.Id = 6;
+}
+Box278
+{
+   Point1 = 7, 5, 2;
+   Point2 = 8, 6, 3;
+   Material.Id = 4;
+}
+Box279
+{
+   Point1 = 7, 5, 3;
+   Point2 = 8, 6, 4;
+   Material.Id = 6;
+}
+Box280
+{
+   Point1 = 7, 5, 4;
+   Point2 = 8, 6, 5;
+   Material.Id = 5;
+}
+Box281
+{
+   Point1 = 7, 6, 1;
+   Point2 = 8, 7, 2;
+   Material.Id = 4;
+}
+Box282
+{
+   Point1 = 7, 6, 2;
+   Point2 = 8, 7, 3;
+   Material.Id = 4;
+}
+Box283
+{
+   Point1 = 7, 6, 3;
+   Point2 = 8, 7, 4;
+   Material.Id = 4;
+}
+Box284
+{
+   Point1 = 7, 6, 4;
+   Point2 = 8, 7, 5;
+   Material.Id = 3;
+}
+Box285
+{
+   Point1 = 7, 7, 1;
+   Point2 = 8, 8, 2;
+   Material.Id = 4;
+}
+Box286
+{
+   Point1 = 7, 7, 2;
+   Point2 = 8, 8, 3;
+   Material.Id = 4;
+}
+Box287
+{
+   Point1 = 7, 7, 3;
+   Point2 = 8, 8, 4;
+   Material.Id = 4;
+}
+Box288
+{
+   Point1 = 7, 7, 4;
+   Point2 = 8, 8, 5;
+   Material.Id = 3;
+}
+Box289
+{
+   Point1 = 7, 8, 1;
+   Point2 = 8, 9, 2;
+   Material.Id = 4;
+}
+Box290
+{
+   Point1 = 7, 8, 2;
+   Point2 = 8, 9, 3;
+   Material.Id = 4;
+}
+Box291
+{
+   Point1 = 7, 8, 3;
+   Point2 = 8, 9, 4;
+   Material.Id = 4;
+}
+Box292
+{
+   Point1 = 7, 8, 4;
+   Point2 = 8, 9, 5;
+   Material.Id = 3;
+}
+Box293
+{
+   Point1 = 7, 9, 1;
+   Point2 = 8, 10, 2;
+   Material.Id = 4;
+}
+Box294
+{
+   Point1 = 7, 9, 2;
+   Point2 = 8, 10, 3;
+   Material.Id = 4;
+}
+Box295
+{
+   Point1 = 7, 9, 3;
+   Point2 = 8, 10, 4;
+   Material.Id = 4;
+}
+Box296
+{
+   Point1 = 7, 9, 4;
+   Point2 = 8, 10, 5;
+   Material.Id = 3;
+}
+Box297
+{
+   Point1 = 7, 10, 1;
+   Point2 = 8, 11, 2;
+   Material.Id = 3;
+}
+Box298
+{
+   Point1 = 7, 10, 2;
+   Point2 = 8, 11, 3;
+   Material.Id = 3;
+}
+Box299
+{
+   Point1 = 7, 10, 3;
+   Point2 = 8, 11, 4;
+   Material.Id = 3;
+}
+Box300
+{
+   Point1 = 8, 2, 2;
+   Point2 = 9, 3, 3;
+   Material.Id = 1;
+}
+Box301
+{
+   Point1 = 8, 3, 2;
+   Point2 = 9, 4, 3;
+   Material.Id = 2;
+}
+Box302
+{
+   Point1 = 8, 4, 1;
+   Point2 = 9, 5, 2;
+   Material.Id = 3;
+}
+Box303
+{
+   Point1 = 8, 4, 2;
+   Point2 = 9, 5, 3;
+   Material.Id = 2;
+}
+Box304
+{
+   Point1 = 8, 4, 4;
+   Point2 = 9, 5, 5;
+   Material.Id = 0;
+}
+Box305
+{
+   Point1 = 8, 5, 1;
+   Point2 = 9, 6, 2;
+   Material.Id = 3;
+}
+Box306
+{
+   Point1 = 8, 5, 2;
+   Point2 = 9, 6, 3;
+   Material.Id = 2;
+}
+Box307
+{
+   Point1 = 8, 5, 3;
+   Point2 = 9, 6, 4;
+   Material.Id = 3;
+}
+Box308
+{
+   Point1 = 8, 5, 4;
+   Point2 = 9, 6, 5;
+   Material.Id = 3;
+}
+Box309
+{
+   Point1 = 8, 6, 2;
+   Point2 = 9, 7, 3;
+   Material.Id = 3;
+}
+Box310
+{
+   Point1 = 8, 6, 3;
+   Point2 = 9, 7, 4;
+   Material.Id = 3;
+}
+Box311
+{
+   Point1 = 8, 7, 1;
+   Point2 = 9, 8, 2;
+   Material.Id = 3;
+}
+Box312
+{
+   Point1 = 8, 7, 2;
+   Point2 = 9, 8, 3;
+   Material.Id = 4;
+}
+Box313
+{
+   Point1 = 8, 7, 3;
+   Point2 = 9, 8, 4;
+   Material.Id = 3;
+}
+Box314
+{
+   Point1 = 8, 8, 2;
+   Point2 = 9, 9, 3;
+   Material.Id = 3;
+}
+Box315
+{
+   Point1 = 8, 8, 3;
+   Point2 = 9, 9, 4;
+   Material.Id = 3;
+}
+Box316
+{
+   Point1 = 8, 9, 1;
+   Point2 = 9, 10, 2;
+   Material.Id = 3;
+}
+Box317
+{
+   Point1 = 8, 9, 2;
+   Point2 = 9, 10, 3;
+   Material.Id = 3;
+}
+Box318
+{
+   Point1 = 8, 9, 3;
+   Point2 = 9, 10, 4;
+   Material.Id = 3;
+}
+Box319
+{
+   Point1 = 8, 10, 2;
+   Point2 = 9, 11, 3;
+   Material.Id = 0;
+}
+Box320
+{
+   Point1 = 9, 5, 3;
+   Point2 = 10, 6, 4;
+   Material.Id = 0;
+}
+Box321
+{
+   Point1 = 9, 6, 3;
+   Point2 = 10, 7, 4;
+   Material.Id = 0;
+}
+Box322
+{
+   Point1 = 9, 7, 2;
+   Point2 = 10, 8, 3;
+   Material.Id = 0;
+}
+Box323
+{
+   Point1 = 9, 7, 3;
+   Point2 = 10, 8, 4;
+   Material.Id = 0;
+}
+Box324
+{
+   Point1 = 9, 8, 2;
+   Point2 = 10, 9, 3;
+   Material.Id = 0;
+}
+Box325
+{
+   Point1 = 9, 9, 2;
+   Point2 = 10, 10, 3;
+   Material.Id = 0;
+}
+Box326
+{
+   Point1 = 11, 2, 2;
+   Point2 = 12, 3, 3;
+   Material.Id = 1;
+}
+Box327
+{
+   Point1 = 11, 3, 2;
+   Point2 = 12, 4, 3;
+   Material.Id = 9;
+}
+Box328
+{
+   Point1 = 11, 4, 2;
+   Point2 = 12, 5, 3;
+   Material.Id = 9;
+}
+Box329
+{
+   Point1 = 11, 5, 2;
+   Point2 = 12, 6, 3;
+   Material.Id = 9;
+}
+Box330
+{
+   Point1 = 11, 7, 2;
+   Point2 = 12, 8, 3;
+   Material.Id = 1;
+}
+Box331
+{
+   Point1 = 12, 1, 1;
+   Point2 = 13, 2, 2;
+   Material.Id = 10;
+}
+Box332
+{
+   Point1 = 12, 1, 2;
+   Point2 = 13, 2, 3;
+   Material.Id = 10;
+}
+Box333
+{
+   Point1 = 12, 1, 3;
+   Point2 = 13, 2, 4;
+   Material.Id = 10;
+}
+Box334
+{
+   Point1 = 12, 2, 0;
+   Point2 = 13, 3, 1;
+   Material.Id = 10;
+}
+Box335
+{
+   Point1 = 12, 2, 1;
+   Point2 = 13, 3, 2;
+   Material.Id = 10;
+}
+Box336
+{
+   Point1 = 12, 2, 2;
+   Point2 = 13, 3, 3;
+   Material.Id = 1;
+}
+Box337
+{
+   Point1 = 12, 2, 3;
+   Point2 = 13, 3, 4;
+   Material.Id = 10;
+}
+Box338
+{
+   Point1 = 12, 2, 4;
+   Point2 = 13, 3, 5;
+   Material.Id = 10;
+}
+Box339
+{
+   Point1 = 12, 3, 0;
+   Point2 = 13, 4, 1;
+   Material.Id = 11;
+}
+Box340
+{
+   Point1 = 12, 3, 1;
+   Point2 = 13, 4, 2;
+   Material.Id = 11;
+}
+Box341
+{
+   Point1 = 12, 3, 2;
+   Point2 = 13, 4, 3;
+   Material.Id = 1;
+}
+Box342
+{
+   Point1 = 12, 3, 3;
+   Point2 = 13, 4, 4;
+   Material.Id = 11;
+}
+Box343
+{
+   Point1 = 12, 3, 4;
+   Point2 = 13, 4, 5;
+   Material.Id = 11;
+}
+Box344
+{
+   Point1 = 12, 4, 0;
+   Point2 = 13, 5, 1;
+   Material.Id = 11;
+}
+Box345
+{
+   Point1 = 12, 4, 1;
+   Point2 = 13, 5, 2;
+   Material.Id = 11;
+}
+Box346
+{
+   Point1 = 12, 4, 2;
+   Point2 = 13, 5, 3;
+   Material.Id = 1;
+}
+Box347
+{
+   Point1 = 12, 4, 3;
+   Point2 = 13, 5, 4;
+   Material.Id = 11;
+}
+Box348
+{
+   Point1 = 12, 4, 4;
+   Point2 = 13, 5, 5;
+   Material.Id = 11;
+}
+Box349
+{
+   Point1 = 12, 5, 0;
+   Point2 = 13, 6, 1;
+   Material.Id = 11;
+}
+Box350
+{
+   Point1 = 12, 5, 1;
+   Point2 = 13, 6, 2;
+   Material.Id = 11;
+}
+Box351
+{
+   Point1 = 12, 5, 2;
+   Point2 = 13, 6, 3;
+   Material.Id = 1;
+}
+Box352
+{
+   Point1 = 12, 5, 3;
+   Point2 = 13, 6, 4;
+   Material.Id = 11;
+}
+Box353
+{
+   Point1 = 12, 5, 4;
+   Point2 = 13, 6, 5;
+   Material.Id = 11;
+}
+Box354
+{
+   Point1 = 12, 6, 1;
+   Point2 = 13, 7, 2;
+   Material.Id = 1;
+}
+Box355
+{
+   Point1 = 12, 6, 2;
+   Point2 = 13, 7, 3;
+   Material.Id = 1;
+}
+Box356
+{
+   Point1 = 12, 6, 3;
+   Point2 = 13, 7, 4;
+   Material.Id = 1;
+}
+Box357
+{
+   Point1 = 12, 7, 1;
+   Point2 = 13, 8, 2;
+   Material.Id = 1;
+}
+Box358
+{
+   Point1 = 12, 7, 2;
+   Point2 = 13, 8, 3;
+   Material.Id = 1;
+}
+Box359
+{
+   Point1 = 12, 7, 3;
+   Point2 = 13, 8, 4;
+   Material.Id = 1;
+}
+Box360
+{
+   Point1 = 12, 8, 1;
+   Point2 = 13, 9, 2;
+   Material.Id = 1;
+}
+Box361
+{
+   Point1 = 12, 8, 2;
+   Point2 = 13, 9, 3;
+   Material.Id = 1;
+}
+Box362
+{
+   Point1 = 12, 8, 3;
+   Point2 = 13, 9, 4;
+   Material.Id = 1;
+}
+Box363
+{
+   Point1 = 12, 9, 1;
+   Point2 = 13, 10, 2;
+   Material.Id = 1;
+}
+Box364
+{
+   Point1 = 12, 9, 2;
+   Point2 = 13, 10, 3;
+   Material.Id = 1;
+}
+Box365
+{
+   Point1 = 12, 9, 3;
+   Point2 = 13, 10, 4;
+   Material.Id = 1;
+}
+Box366
+{
+   Point1 = 13, 0, 2;
+   Point2 = 14, 1, 3;
+   Material.Id = 7;
+}
+Box367
+{
+   Point1 = 13, 1, 1;
+   Point2 = 14, 2, 2;
+   Material.Id = 10;
+}
+Box368
+{
+   Point1 = 13, 1, 2;
+   Point2 = 14, 2, 3;
+   Material.Id = 10;
+}
+Box369
+{
+   Point1 = 13, 1, 3;
+   Point2 = 14, 2, 4;
+   Material.Id = 10;
+}
+Box370
+{
+   Point1 = 13, 2, 0;
+   Point2 = 14, 3, 1;
+   Material.Id = 10;
+}
+Box371
+{
+   Point1 = 13, 2, 1;
+   Point2 = 14, 3, 2;
+   Material.Id = 1;
+}
+Box372
+{
+   Point1 = 13, 2, 2;
+   Point2 = 14, 3, 3;
+   Material.Id = 1;
+}
+Box373
+{
+   Point1 = 13, 2, 3;
+   Point2 = 14, 3, 4;
+   Material.Id = 1;
+}
+Box374
+{
+   Point1 = 13, 2, 4;
+   Point2 = 14, 3, 5;
+   Material.Id = 10;
+}
+Box375
+{
+   Point1 = 13, 3, 0;
+   Point2 = 14, 4, 1;
+   Material.Id = 12;
+}
+Box376
+{
+   Point1 = 13, 3, 1;
+   Point2 = 14, 4, 2;
+   Material.Id = 1;
+}
+Box377
+{
+   Point1 = 13, 3, 2;
+   Point2 = 14, 4, 3;
+   Material.Id = 1;
+}
+Box378
+{
+   Point1 = 13, 3, 3;
+   Point2 = 14, 4, 4;
+   Material.Id = 1;
+}
+Box379
+{
+   Point1 = 13, 3, 4;
+   Point2 = 14, 4, 5;
+   Material.Id = 12;
+}
+Box380
+{
+   Point1 = 13, 4, 0;
+   Point2 = 14, 5, 1;
+   Material.Id = 12;
+}
+Box381
+{
+   Point1 = 13, 4, 1;
+   Point2 = 14, 5, 2;
+   Material.Id = 1;
+}
+Box382
+{
+   Point1 = 13, 4, 2;
+   Point2 = 14, 5, 3;
+   Material.Id = 1;
+}
+Box383
+{
+   Point1 = 13, 4, 3;
+   Point2 = 14, 5, 4;
+   Material.Id = 1;
+}
+Box384
+{
+   Point1 = 13, 4, 4;
+   Point2 = 14, 5, 5;
+   Material.Id = 12;
+}
+Box385
+{
+   Point1 = 13, 5, 0;
+   Point2 = 14, 6, 1;
+   Material.Id = 12;
+}
+Box386
+{
+   Point1 = 13, 5, 1;
+   Point2 = 14, 6, 2;
+   Material.Id = 1;
+}
+Box387
+{
+   Point1 = 13, 5, 2;
+   Point2 = 14, 6, 3;
+   Material.Id = 1;
+}
+Box388
+{
+   Point1 = 13, 5, 3;
+   Point2 = 14, 6, 4;
+   Material.Id = 1;
+}
+Box389
+{
+   Point1 = 13, 5, 4;
+   Point2 = 14, 6, 5;
+   Material.Id = 12;
+}
+Box390
+{
+   Point1 = 13, 6, 1;
+   Point2 = 14, 7, 2;
+   Material.Id = 1;
+}
+Box391
+{
+   Point1 = 13, 6, 2;
+   Point2 = 14, 7, 3;
+   Material.Id = 1;
+}
+Box392
+{
+   Point1 = 13, 6, 3;
+   Point2 = 14, 7, 4;
+   Material.Id = 1;
+}
+Box393
+{
+   Point1 = 13, 6, 4;
+   Point2 = 14, 7, 5;
+   Material.Id = 1;
+}
+Box394
+{
+   Point1 = 13, 7, 1;
+   Point2 = 14, 8, 2;
+   Material.Id = 3;
+}
+Box395
+{
+   Point1 = 13, 7, 2;
+   Point2 = 14, 8, 3;
+   Material.Id = 1;
+}
+Box396
+{
+   Point1 = 13, 7, 3;
+   Point2 = 14, 8, 4;
+   Material.Id = 1;
+}
+Box397
+{
+   Point1 = 13, 7, 4;
+   Point2 = 14, 8, 5;
+   Material.Id = 1;
+}
+Box398
+{
+   Point1 = 13, 8, 1;
+   Point2 = 14, 9, 2;
+   Material.Id = 1;
+}
+Box399
+{
+   Point1 = 13, 8, 2;
+   Point2 = 14, 9, 3;
+   Material.Id = 1;
+}
+Box400
+{
+   Point1 = 13, 8, 3;
+   Point2 = 14, 9, 4;
+   Material.Id = 1;
+}
+Box401
+{
+   Point1 = 13, 8, 4;
+   Point2 = 14, 9, 5;
+   Material.Id = 1;
+}
+Box402
+{
+   Point1 = 13, 9, 1;
+   Point2 = 14, 10, 2;
+   Material.Id = 1;
+}
+Box403
+{
+   Point1 = 13, 9, 2;
+   Point2 = 14, 10, 3;
+   Material.Id = 1;
+}
+Box404
+{
+   Point1 = 13, 9, 3;
+   Point2 = 14, 10, 4;
+   Material.Id = 1;
+}
+Box405
+{
+   Point1 = 13, 10, 5;
+   Point2 = 14, 11, 6;
+   Material.Id = 13;
+}
+Box406
+{
+   Point1 = 13, 11, 0;
+   Point2 = 14, 12, 1;
+   Material.Id = 13;
+}
+Box407
+{
+   Point1 = 13, 11, 1;
+   Point2 = 14, 12, 2;
+   Material.Id = 13;
+}
+Box408
+{
+   Point1 = 13, 11, 2;
+   Point2 = 14, 12, 3;
+   Material.Id = 13;
+}
+Box409
+{
+   Point1 = 13, 11, 3;
+   Point2 = 14, 12, 4;
+   Material.Id = 13;
+}
+Box410
+{
+   Point1 = 13, 11, 4;
+   Point2 = 14, 12, 5;
+   Material.Id = 13;
+}
+Box411
+{
+   Point1 = 13, 11, 5;
+   Point2 = 14, 12, 6;
+   Material.Id = 13;
+}
+Box412
+{
+   Point1 = 14, 2, 0;
+   Point2 = 15, 3, 1;
+   Material.Id = 10;
+}
+Box413
+{
+   Point1 = 14, 2, 1;
+   Point2 = 15, 3, 2;
+   Material.Id = 10;
+}
+Box414
+{
+   Point1 = 14, 2, 2;
+   Point2 = 15, 3, 3;
+   Material.Id = 10;
+}
+Box415
+{
+   Point1 = 14, 2, 3;
+   Point2 = 15, 3, 4;
+   Material.Id = 10;
+}
+Box416
+{
+   Point1 = 14, 2, 4;
+   Point2 = 15, 3, 5;
+   Material.Id = 10;
+}
+Box417
+{
+   Point1 = 14, 3, 0;
+   Point2 = 15, 4, 1;
+   Material.Id = 11;
+}
+Box418
+{
+   Point1 = 14, 3, 1;
+   Point2 = 15, 4, 2;
+   Material.Id = 1;
+}
+Box419
+{
+   Point1 = 14, 3, 2;
+   Point2 = 15, 4, 3;
+   Material.Id = 1;
+}
+Box420
+{
+   Point1 = 14, 3, 3;
+   Point2 = 15, 4, 4;
+   Material.Id = 1;
+}
+Box421
+{
+   Point1 = 14, 3, 4;
+   Point2 = 15, 4, 5;
+   Material.Id = 11;
+}
+Box422
+{
+   Point1 = 14, 4, 0;
+   Point2 = 15, 5, 1;
+   Material.Id = 11;
+}
+Box423
+{
+   Point1 = 14, 4, 1;
+   Point2 = 15, 5, 2;
+   Material.Id = 1;
+}
+Box424
+{
+   Point1 = 14, 4, 2;
+   Point2 = 15, 5, 3;
+   Material.Id = 1;
+}
+Box425
+{
+   Point1 = 14, 4, 3;
+   Point2 = 15, 5, 4;
+   Material.Id = 1;
+}
+Box426
+{
+   Point1 = 14, 4, 4;
+   Point2 = 15, 5, 5;
+   Material.Id = 11;
+}
+Box427
+{
+   Point1 = 14, 5, 0;
+   Point2 = 15, 6, 1;
+   Material.Id = 11;
+}
+Box428
+{
+   Point1 = 14, 5, 1;
+   Point2 = 15, 6, 2;
+   Material.Id = 1;
+}
+Box429
+{
+   Point1 = 14, 5, 2;
+   Point2 = 15, 6, 3;
+   Material.Id = 1;
+}
+Box430
+{
+   Point1 = 14, 5, 3;
+   Point2 = 15, 6, 4;
+   Material.Id = 1;
+}
+Box431
+{
+   Point1 = 14, 5, 4;
+   Point2 = 15, 6, 5;
+   Material.Id = 11;
+}
+Box432
+{
+   Point1 = 14, 6, 1;
+   Point2 = 15, 7, 2;
+   Material.Id = 1;
+}
+Box433
+{
+   Point1 = 14, 6, 2;
+   Point2 = 15, 7, 3;
+   Material.Id = 1;
+}
+Box434
+{
+   Point1 = 14, 6, 3;
+   Point2 = 15, 7, 4;
+   Material.Id = 1;
+}
+Box435
+{
+   Point1 = 14, 6, 4;
+   Point2 = 15, 7, 5;
+   Material.Id = 1;
+}
+Box436
+{
+   Point1 = 14, 7, 1;
+   Point2 = 15, 8, 2;
+   Material.Id = 1;
+}
+Box437
+{
+   Point1 = 14, 7, 2;
+   Point2 = 15, 8, 3;
+   Material.Id = 1;
+}
+Box438
+{
+   Point1 = 14, 7, 3;
+   Point2 = 15, 8, 4;
+   Material.Id = 1;
+}
+Box439
+{
+   Point1 = 14, 7, 4;
+   Point2 = 15, 8, 5;
+   Material.Id = 1;
+}
+Box440
+{
+   Point1 = 14, 8, 1;
+   Point2 = 15, 9, 2;
+   Material.Id = 1;
+}
+Box441
+{
+   Point1 = 14, 8, 2;
+   Point2 = 15, 9, 3;
+   Material.Id = 1;
+}
+Box442
+{
+   Point1 = 14, 8, 3;
+   Point2 = 15, 9, 4;
+   Material.Id = 1;
+}
+Box443
+{
+   Point1 = 14, 8, 4;
+   Point2 = 15, 9, 5;
+   Material.Id = 1;
+}
+Box444
+{
+   Point1 = 14, 8, 5;
+   Point2 = 15, 9, 6;
+   Material.Id = 13;
+}
+Box445
+{
+   Point1 = 14, 9, 0;
+   Point2 = 15, 10, 1;
+   Material.Id = 13;
+}
+Box446
+{
+   Point1 = 14, 9, 1;
+   Point2 = 15, 10, 2;
+   Material.Id = 1;
+}
+Box447
+{
+   Point1 = 14, 9, 2;
+   Point2 = 15, 10, 3;
+   Material.Id = 1;
+}
+Box448
+{
+   Point1 = 14, 9, 3;
+   Point2 = 15, 10, 4;
+   Material.Id = 1;
+}
+Box449
+{
+   Point1 = 14, 9, 4;
+   Point2 = 15, 10, 5;
+   Material.Id = 13;
+}
+Box450
+{
+   Point1 = 14, 9, 5;
+   Point2 = 15, 10, 6;
+   Material.Id = 13;
+}
+Box451
+{
+   Point1 = 14, 10, 0;
+   Point2 = 15, 11, 1;
+   Material.Id = 13;
+}
+Box452
+{
+   Point1 = 14, 10, 1;
+   Point2 = 15, 11, 2;
+   Material.Id = 13;
+}
+Box453
+{
+   Point1 = 14, 10, 2;
+   Point2 = 15, 11, 3;
+   Material.Id = 13;
+}
+Box454
+{
+   Point1 = 14, 10, 3;
+   Point2 = 15, 11, 4;
+   Material.Id = 13;
+}
+Box455
+{
+   Point1 = 14, 10, 4;
+   Point2 = 15, 11, 5;
+   Material.Id = 13;
+}
+Box456
+{
+   Point1 = 14, 10, 5;
+   Point2 = 15, 11, 6;
+   Material.Id = 13;
+}
+Box457
+{
+   Point1 = 14, 11, 0;
+   Point2 = 15, 12, 1;
+   Material.Id = 13;
+}
+Box458
+{
+   Point1 = 14, 11, 1;
+   Point2 = 15, 12, 2;
+   Material.Id = 13;
+}
+Box459
+{
+   Point1 = 14, 11, 2;
+   Point2 = 15, 12, 3;
+   Material.Id = 13;
+}
+Box460
+{
+   Point1 = 14, 11, 3;
+   Point2 = 15, 12, 4;
+   Material.Id = 13;
+}
+Box461
+{
+   Point1 = 14, 11, 4;
+   Point2 = 15, 12, 5;
+   Material.Id = 13;
+}
+Box462
+{
+   Point1 = 14, 11, 5;
+   Point2 = 15, 12, 6;
+   Material.Id = 13;
+}
+Box463
+{
+   Point1 = 15, 2, 0;
+   Point2 = 16, 3, 1;
+   Material.Id = 10;
+}
+Box464
+{
+   Point1 = 15, 2, 1;
+   Point2 = 16, 3, 2;
+   Material.Id = 10;
+}
+Box465
+{
+   Point1 = 15, 2, 2;
+   Point2 = 16, 3, 3;
+   Material.Id = 10;
+}
+Box466
+{
+   Point1 = 15, 2, 3;
+   Point2 = 16, 3, 4;
+   Material.Id = 10;
+}
+Box467
+{
+   Point1 = 15, 2, 4;
+   Point2 = 16, 3, 5;
+   Material.Id = 10;
+}
+Box468
+{
+   Point1 = 15, 3, 0;
+   Point2 = 16, 4, 1;
+   Material.Id = 11;
+}
+Box469
+{
+   Point1 = 15, 3, 1;
+   Point2 = 16, 4, 2;
+   Material.Id = 1;
+}
+Box470
+{
+   Point1 = 15, 3, 2;
+   Point2 = 16, 4, 3;
+   Material.Id = 1;
+}
+Box471
+{
+   Point1 = 15, 3, 3;
+   Point2 = 16, 4, 4;
+   Material.Id = 1;
+}
+Box472
+{
+   Point1 = 15, 3, 4;
+   Point2 = 16, 4, 5;
+   Material.Id = 11;
+}
+Box473
+{
+   Point1 = 15, 4, 0;
+   Point2 = 16, 5, 1;
+   Material.Id = 11;
+}
+Box474
+{
+   Point1 = 15, 4, 1;
+   Point2 = 16, 5, 2;
+   Material.Id = 1;
+}
+Box475
+{
+   Point1 = 15, 4, 2;
+   Point2 = 16, 5, 3;
+   Material.Id = 1;
+}
+Box476
+{
+   Point1 = 15, 4, 3;
+   Point2 = 16, 5, 4;
+   Material.Id = 1;
+}
+Box477
+{
+   Point1 = 15, 4, 4;
+   Point2 = 16, 5, 5;
+   Material.Id = 11;
+}
+Box478
+{
+   Point1 = 15, 5, 0;
+   Point2 = 16, 6, 1;
+   Material.Id = 11;
+}
+Box479
+{
+   Point1 = 15, 5, 1;
+   Point2 = 16, 6, 2;
+   Material.Id = 1;
+}
+Box480
+{
+   Point1 = 15, 5, 2;
+   Point2 = 16, 6, 3;
+   Material.Id = 1;
+}
+Box481
+{
+   Point1 = 15, 5, 3;
+   Point2 = 16, 6, 4;
+   Material.Id = 1;
+}
+Box482
+{
+   Point1 = 15, 5, 4;
+   Point2 = 16, 6, 5;
+   Material.Id = 11;
+}
+Box483
+{
+   Point1 = 15, 6, 1;
+   Point2 = 16, 7, 2;
+   Material.Id = 1;
+}
+Box484
+{
+   Point1 = 15, 6, 2;
+   Point2 = 16, 7, 3;
+   Material.Id = 1;
+}
+Box485
+{
+   Point1 = 15, 6, 3;
+   Point2 = 16, 7, 4;
+   Material.Id = 1;
+}
+Box486
+{
+   Point1 = 15, 6, 4;
+   Point2 = 16, 7, 5;
+   Material.Id = 1;
+}
+Box487
+{
+   Point1 = 15, 7, 1;
+   Point2 = 16, 8, 2;
+   Material.Id = 1;
+}
+Box488
+{
+   Point1 = 15, 7, 2;
+   Point2 = 16, 8, 3;
+   Material.Id = 1;
+}
+Box489
+{
+   Point1 = 15, 7, 3;
+   Point2 = 16, 8, 4;
+   Material.Id = 1;
+}
+Box490
+{
+   Point1 = 15, 7, 4;
+   Point2 = 16, 8, 5;
+   Material.Id = 1;
+}
+Box491
+{
+   Point1 = 15, 8, 1;
+   Point2 = 16, 9, 2;
+   Material.Id = 1;
+}
+Box492
+{
+   Point1 = 15, 8, 2;
+   Point2 = 16, 9, 3;
+   Material.Id = 1;
+}
+Box493
+{
+   Point1 = 15, 8, 3;
+   Point2 = 16, 9, 4;
+   Material.Id = 1;
+}
+Box494
+{
+   Point1 = 15, 8, 4;
+   Point2 = 16, 9, 5;
+   Material.Id = 1;
+}
+Box495
+{
+   Point1 = 15, 8, 5;
+   Point2 = 16, 9, 6;
+   Material.Id = 13;
+}
+Box496
+{
+   Point1 = 15, 9, 0;
+   Point2 = 16, 10, 1;
+   Material.Id = 13;
+}
+Box497
+{
+   Point1 = 15, 9, 1;
+   Point2 = 16, 10, 2;
+   Material.Id = 1;
+}
+Box498
+{
+   Point1 = 15, 9, 2;
+   Point2 = 16, 10, 3;
+   Material.Id = 1;
+}
+Box499
+{
+   Point1 = 15, 9, 3;
+   Point2 = 16, 10, 4;
+   Material.Id = 1;
+}
+Box500
+{
+   Point1 = 15, 9, 4;
+   Point2 = 16, 10, 5;
+   Material.Id = 1;
+}
+Box501
+{
+   Point1 = 15, 9, 5;
+   Point2 = 16, 10, 6;
+   Material.Id = 13;
+}
+Box502
+{
+   Point1 = 15, 10, 0;
+   Point2 = 16, 11, 1;
+   Material.Id = 13;
+}
+Box503
+{
+   Point1 = 15, 10, 1;
+   Point2 = 16, 11, 2;
+   Material.Id = 13;
+}
+Box504
+{
+   Point1 = 15, 10, 2;
+   Point2 = 16, 11, 3;
+   Material.Id = 13;
+}
+Box505
+{
+   Point1 = 15, 10, 3;
+   Point2 = 16, 11, 4;
+   Material.Id = 13;
+}
+Box506
+{
+   Point1 = 15, 10, 4;
+   Point2 = 16, 11, 5;
+   Material.Id = 13;
+}
+Box507
+{
+   Point1 = 15, 10, 5;
+   Point2 = 16, 11, 6;
+   Material.Id = 13;
+}
+Box508
+{
+   Point1 = 15, 11, 0;
+   Point2 = 16, 12, 1;
+   Material.Id = 13;
+}
+Box509
+{
+   Point1 = 15, 11, 1;
+   Point2 = 16, 12, 2;
+   Material.Id = 13;
+}
+Box510
+{
+   Point1 = 15, 11, 2;
+   Point2 = 16, 12, 3;
+   Material.Id = 13;
+}
+Box511
+{
+   Point1 = 15, 11, 3;
+   Point2 = 16, 12, 4;
+   Material.Id = 13;
+}
+Box512
+{
+   Point1 = 15, 11, 4;
+   Point2 = 16, 12, 5;
+   Material.Id = 13;
+}
+Box513
+{
+   Point1 = 15, 11, 5;
+   Point2 = 16, 12, 6;
+   Material.Id = 13;
+}
+Box514
+{
+   Point1 = 16, 0, 2;
+   Point2 = 17, 1, 3;
+   Material.Id = 7;
+}
+Box515
+{
+   Point1 = 16, 1, 1;
+   Point2 = 17, 2, 2;
+   Material.Id = 10;
+}
+Box516
+{
+   Point1 = 16, 1, 2;
+   Point2 = 17, 2, 3;
+   Material.Id = 10;
+}
+Box517
+{
+   Point1 = 16, 1, 3;
+   Point2 = 17, 2, 4;
+   Material.Id = 10;
+}
+Box518
+{
+   Point1 = 16, 2, 0;
+   Point2 = 17, 3, 1;
+   Material.Id = 10;
+}
+Box519
+{
+   Point1 = 16, 2, 1;
+   Point2 = 17, 3, 2;
+   Material.Id = 1;
+}
+Box520
+{
+   Point1 = 16, 2, 2;
+   Point2 = 17, 3, 3;
+   Material.Id = 1;
+}
+Box521
+{
+   Point1 = 16, 2, 3;
+   Point2 = 17, 3, 4;
+   Material.Id = 1;
+}
+Box522
+{
+   Point1 = 16, 2, 4;
+   Point2 = 17, 3, 5;
+   Material.Id = 10;
+}
+Box523
+{
+   Point1 = 16, 3, 0;
+   Point2 = 17, 4, 1;
+   Material.Id = 12;
+}
+Box524
+{
+   Point1 = 16, 3, 1;
+   Point2 = 17, 4, 2;
+   Material.Id = 1;
+}
+Box525
+{
+   Point1 = 16, 3, 2;
+   Point2 = 17, 4, 3;
+   Material.Id = 1;
+}
+Box526
+{
+   Point1 = 16, 3, 3;
+   Point2 = 17, 4, 4;
+   Material.Id = 1;
+}
+Box527
+{
+   Point1 = 16, 3, 4;
+   Point2 = 17, 4, 5;
+   Material.Id = 12;
+}
+Box528
+{
+   Point1 = 16, 4, 0;
+   Point2 = 17, 5, 1;
+   Material.Id = 12;
+}
+Box529
+{
+   Point1 = 16, 4, 1;
+   Point2 = 17, 5, 2;
+   Material.Id = 1;
+}
+Box530
+{
+   Point1 = 16, 4, 2;
+   Point2 = 17, 5, 3;
+   Material.Id = 1;
+}
+Box531
+{
+   Point1 = 16, 4, 3;
+   Point2 = 17, 5, 4;
+   Material.Id = 1;
+}
+Box532
+{
+   Point1 = 16, 4, 4;
+   Point2 = 17, 5, 5;
+   Material.Id = 12;
+}
+Box533
+{
+   Point1 = 16, 5, 0;
+   Point2 = 17, 6, 1;
+   Material.Id = 12;
+}
+Box534
+{
+   Point1 = 16, 5, 1;
+   Point2 = 17, 6, 2;
+   Material.Id = 1;
+}
+Box535
+{
+   Point1 = 16, 5, 2;
+   Point2 = 17, 6, 3;
+   Material.Id = 1;
+}
+Box536
+{
+   Point1 = 16, 5, 3;
+   Point2 = 17, 6, 4;
+   Material.Id = 1;
+}
+Box537
+{
+   Point1 = 16, 5, 4;
+   Point2 = 17, 6, 5;
+   Material.Id = 12;
+}
+Box538
+{
+   Point1 = 16, 6, 1;
+   Point2 = 17, 7, 2;
+   Material.Id = 1;
+}
+Box539
+{
+   Point1 = 16, 6, 2;
+   Point2 = 17, 7, 3;
+   Material.Id = 1;
+}
+Box540
+{
+   Point1 = 16, 6, 3;
+   Point2 = 17, 7, 4;
+   Material.Id = 1;
+}
+Box541
+{
+   Point1 = 16, 6, 4;
+   Point2 = 17, 7, 5;
+   Material.Id = 1;
+}
+Box542
+{
+   Point1 = 16, 7, 1;
+   Point2 = 17, 8, 2;
+   Material.Id = 3;
+}
+Box543
+{
+   Point1 = 16, 7, 2;
+   Point2 = 17, 8, 3;
+   Material.Id = 1;
+}
+Box544
+{
+   Point1 = 16, 7, 3;
+   Point2 = 17, 8, 4;
+   Material.Id = 1;
+}
+Box545
+{
+   Point1 = 16, 7, 4;
+   Point2 = 17, 8, 5;
+   Material.Id = 1;
+}
+Box546
+{
+   Point1 = 16, 8, 1;
+   Point2 = 17, 9, 2;
+   Material.Id = 1;
+}
+Box547
+{
+   Point1 = 16, 8, 2;
+   Point2 = 17, 9, 3;
+   Material.Id = 1;
+}
+Box548
+{
+   Point1 = 16, 8, 3;
+   Point2 = 17, 9, 4;
+   Material.Id = 1;
+}
+Box549
+{
+   Point1 = 16, 8, 4;
+   Point2 = 17, 9, 5;
+   Material.Id = 1;
+}
+Box550
+{
+   Point1 = 16, 9, 1;
+   Point2 = 17, 10, 2;
+   Material.Id = 1;
+}
+Box551
+{
+   Point1 = 16, 9, 2;
+   Point2 = 17, 10, 3;
+   Material.Id = 1;
+}
+Box552
+{
+   Point1 = 16, 9, 3;
+   Point2 = 17, 10, 4;
+   Material.Id = 1;
+}
+Box553
+{
+   Point1 = 17, 1, 1;
+   Point2 = 18, 2, 2;
+   Material.Id = 10;
+}
+Box554
+{
+   Point1 = 17, 1, 2;
+   Point2 = 18, 2, 3;
+   Material.Id = 10;
+}
+Box555
+{
+   Point1 = 17, 1, 3;
+   Point2 = 18, 2, 4;
+   Material.Id = 10;
+}
+Box556
+{
+   Point1 = 17, 2, 0;
+   Point2 = 18, 3, 1;
+   Material.Id = 10;
+}
+Box557
+{
+   Point1 = 17, 2, 1;
+   Point2 = 18, 3, 2;
+   Material.Id = 10;
+}
+Box558
+{
+   Point1 = 17, 2, 2;
+   Point2 = 18, 3, 3;
+   Material.Id = 1;
+}
+Box559
+{
+   Point1 = 17, 2, 3;
+   Point2 = 18, 3, 4;
+   Material.Id = 10;
+}
+Box560
+{
+   Point1 = 17, 2, 4;
+   Point2 = 18, 3, 5;
+   Material.Id = 10;
+}
+Box561
+{
+   Point1 = 17, 3, 0;
+   Point2 = 18, 4, 1;
+   Material.Id = 11;
+}
+Box562
+{
+   Point1 = 17, 3, 1;
+   Point2 = 18, 4, 2;
+   Material.Id = 11;
+}
+Box563
+{
+   Point1 = 17, 3, 2;
+   Point2 = 18, 4, 3;
+   Material.Id = 1;
+}
+Box564
+{
+   Point1 = 17, 3, 3;
+   Point2 = 18, 4, 4;
+   Material.Id = 11;
+}
+Box565
+{
+   Point1 = 17, 3, 4;
+   Point2 = 18, 4, 5;
+   Material.Id = 11;
+}
+Box566
+{
+   Point1 = 17, 4, 0;
+   Point2 = 18, 5, 1;
+   Material.Id = 11;
+}
+Box567
+{
+   Point1 = 17, 4, 1;
+   Point2 = 18, 5, 2;
+   Material.Id = 11;
+}
+Box568
+{
+   Point1 = 17, 4, 2;
+   Point2 = 18, 5, 3;
+   Material.Id = 1;
+}
+Box569
+{
+   Point1 = 17, 4, 3;
+   Point2 = 18, 5, 4;
+   Material.Id = 11;
+}
+Box570
+{
+   Point1 = 17, 4, 4;
+   Point2 = 18, 5, 5;
+   Material.Id = 11;
+}
+Box571
+{
+   Point1 = 17, 5, 0;
+   Point2 = 18, 6, 1;
+   Material.Id = 11;
+}
+Box572
+{
+   Point1 = 17, 5, 1;
+   Point2 = 18, 6, 2;
+   Material.Id = 11;
+}
+Box573
+{
+   Point1 = 17, 5, 2;
+   Point2 = 18, 6, 3;
+   Material.Id = 1;
+}
+Box574
+{
+   Point1 = 17, 5, 3;
+   Point2 = 18, 6, 4;
+   Material.Id = 11;
+}
+Box575
+{
+   Point1 = 17, 5, 4;
+   Point2 = 18, 6, 5;
+   Material.Id = 11;
+}
+Box576
+{
+   Point1 = 17, 6, 1;
+   Point2 = 18, 7, 2;
+   Material.Id = 1;
+}
+Box577
+{
+   Point1 = 17, 6, 2;
+   Point2 = 18, 7, 3;
+   Material.Id = 1;
+}
+Box578
+{
+   Point1 = 17, 6, 3;
+   Point2 = 18, 7, 4;
+   Material.Id = 1;
+}
+Box579
+{
+   Point1 = 17, 7, 1;
+   Point2 = 18, 8, 2;
+   Material.Id = 1;
+}
+Box580
+{
+   Point1 = 17, 7, 2;
+   Point2 = 18, 8, 3;
+   Material.Id = 1;
+}
+Box581
+{
+   Point1 = 17, 7, 3;
+   Point2 = 18, 8, 4;
+   Material.Id = 1;
+}
+Box582
+{
+   Point1 = 17, 8, 1;
+   Point2 = 18, 9, 2;
+   Material.Id = 1;
+}
+Box583
+{
+   Point1 = 17, 8, 2;
+   Point2 = 18, 9, 3;
+   Material.Id = 1;
+}
+Box584
+{
+   Point1 = 17, 8, 3;
+   Point2 = 18, 9, 4;
+   Material.Id = 1;
+}
+Box585
+{
+   Point1 = 17, 9, 1;
+   Point2 = 18, 10, 2;
+   Material.Id = 1;
+}
+Box586
+{
+   Point1 = 17, 9, 2;
+   Point2 = 18, 10, 3;
+   Material.Id = 1;
+}
+Box587
+{
+   Point1 = 17, 9, 3;
+   Point2 = 18, 10, 4;
+   Material.Id = 1;
+}
+Box588
+{
+   Point1 = 18, 2, 2;
+   Point2 = 19, 3, 3;
+   Material.Id = 1;
+}
+Box589
+{
+   Point1 = 18, 3, 2;
+   Point2 = 19, 4, 3;
+   Material.Id = 9;
+}
+Box590
+{
+   Point1 = 18, 4, 2;
+   Point2 = 19, 5, 3;
+   Material.Id = 9;
+}
+Box591
+{
+   Point1 = 18, 5, 2;
+   Point2 = 19, 6, 3;
+   Material.Id = 9;
+}
+Box592
+{
+   Point1 = 18, 7, 2;
+   Point2 = 19, 8, 3;
+   Material.Id = 1;
+}
+Box593
+{
+   Point1 = 20, 5, 2;
+   Point2 = 21, 6, 3;
+   Material.Id = 1;
+}
+Box594
+{
+   Point1 = 21, 5, 2;
+   Point2 = 22, 6, 3;
+   Material.Id = 14;
+}
+Box595
+{
+   Point1 = 22, 5, 2;
+   Point2 = 23, 6, 3;
+   Material.Id = 14;
+}
+Box596
+{
+   Point1 = 22, 7, 2;
+   Point2 = 23, 8, 3;
+   Material.Id = 15;
+}
+Box597
+{
+   Point1 = 22, 7, 3;
+   Point2 = 23, 8, 4;
+   Material.Id = 16;
+}
+Box598
+{
+   Point1 = 22, 8, 1;
+   Point2 = 23, 9, 2;
+   Material.Id = 16;
+}
+Box599
+{
+   Point1 = 22, 8, 2;
+   Point2 = 23, 9, 3;
+   Material.Id = 16;
+}
+Box600
+{
+   Point1 = 22, 8, 3;
+   Point2 = 23, 9, 4;
+   Material.Id = 16;
+}
+Box601
+{
+   Point1 = 22, 9, 2;
+   Point2 = 23, 10, 3;
+   Material.Id = 16;
+}
+Box602
+{
+   Point1 = 22, 9, 3;
+   Point2 = 23, 10, 4;
+   Material.Id = 16;
+}
+Box603
+{
+   Point1 = 23, 1, 0;
+   Point2 = 24, 2, 1;
+   Material.Id = 17;
+}
+Box604
+{
+   Point1 = 23, 1, 1;
+   Point2 = 24, 2, 2;
+   Material.Id = 6;
+}
+Box605
+{
+   Point1 = 23, 1, 2;
+   Point2 = 24, 2, 3;
+   Material.Id = 6;
+}
+Box606
+{
+   Point1 = 23, 1, 3;
+   Point2 = 24, 2, 4;
+   Material.Id = 6;
+}
+Box607
+{
+   Point1 = 23, 2, 0;
+   Point2 = 24, 3, 1;
+   Material.Id = 17;
+}
+Box608
+{
+   Point1 = 23, 2, 1;
+   Point2 = 24, 3, 2;
+   Material.Id = 6;
+}
+Box609
+{
+   Point1 = 23, 2, 2;
+   Point2 = 24, 3, 3;
+   Material.Id = 6;
+}
+Box610
+{
+   Point1 = 23, 2, 3;
+   Point2 = 24, 3, 4;
+   Material.Id = 6;
+}
+Box611
+{
+   Point1 = 23, 2, 4;
+   Point2 = 24, 3, 5;
+   Material.Id = 6;
+}
+Box612
+{
+   Point1 = 23, 3, 0;
+   Point2 = 24, 4, 1;
+   Material.Id = 17;
+}
+Box613
+{
+   Point1 = 23, 3, 1;
+   Point2 = 24, 4, 2;
+   Material.Id = 17;
+}
+Box614
+{
+   Point1 = 23, 3, 2;
+   Point2 = 24, 4, 3;
+   Material.Id = 17;
+}
+Box615
+{
+   Point1 = 23, 3, 3;
+   Point2 = 24, 4, 4;
+   Material.Id = 17;
+}
+Box616
+{
+   Point1 = 23, 3, 4;
+   Point2 = 24, 4, 5;
+   Material.Id = 17;
+}
+Box617
+{
+   Point1 = 23, 4, 0;
+   Point2 = 24, 5, 1;
+   Material.Id = 17;
+}
+Box618
+{
+   Point1 = 23, 4, 1;
+   Point2 = 24, 5, 2;
+   Material.Id = 14;
+}
+Box619
+{
+   Point1 = 23, 4, 2;
+   Point2 = 24, 5, 3;
+   Material.Id = 14;
+}
+Box620
+{
+   Point1 = 23, 4, 3;
+   Point2 = 24, 5, 4;
+   Material.Id = 14;
+}
+Box621
+{
+   Point1 = 23, 4, 4;
+   Point2 = 24, 5, 5;
+   Material.Id = 14;
+}
+Box622
+{
+   Point1 = 23, 5, 0;
+   Point2 = 24, 6, 1;
+   Material.Id = 17;
+}
+Box623
+{
+   Point1 = 23, 5, 1;
+   Point2 = 24, 6, 2;
+   Material.Id = 17;
+}
+Box624
+{
+   Point1 = 23, 5, 2;
+   Point2 = 24, 6, 3;
+   Material.Id = 1;
+}
+Box625
+{
+   Point1 = 23, 5, 3;
+   Point2 = 24, 6, 4;
+   Material.Id = 17;
+}
+Box626
+{
+   Point1 = 23, 5, 4;
+   Point2 = 24, 6, 5;
+   Material.Id = 17;
+}
+Box627
+{
+   Point1 = 23, 6, 1;
+   Point2 = 24, 7, 2;
+   Material.Id = 1;
+}
+Box628
+{
+   Point1 = 23, 6, 2;
+   Point2 = 24, 7, 3;
+   Material.Id = 1;
+}
+Box629
+{
+   Point1 = 23, 6, 3;
+   Point2 = 24, 7, 4;
+   Material.Id = 1;
+}
+Box630
+{
+   Point1 = 23, 7, 1;
+   Point2 = 24, 8, 2;
+   Material.Id = 1;
+}
+Box631
+{
+   Point1 = 23, 7, 2;
+   Point2 = 24, 8, 3;
+   Material.Id = 1;
+}
+Box632
+{
+   Point1 = 23, 7, 3;
+   Point2 = 24, 8, 4;
+   Material.Id = 1;
+}
+Box633
+{
+   Point1 = 23, 7, 4;
+   Point2 = 24, 8, 5;
+   Material.Id = 16;
+}
+Box634
+{
+   Point1 = 23, 8, 1;
+   Point2 = 24, 9, 2;
+   Material.Id = 1;
+}
+Box635
+{
+   Point1 = 23, 8, 2;
+   Point2 = 24, 9, 3;
+   Material.Id = 1;
+}
+Box636
+{
+   Point1 = 23, 8, 3;
+   Point2 = 24, 9, 4;
+   Material.Id = 1;
+}
+Box637
+{
+   Point1 = 23, 8, 4;
+   Point2 = 24, 9, 5;
+   Material.Id = 16;
+}
+Box638
+{
+   Point1 = 23, 9, 0;
+   Point2 = 24, 10, 1;
+   Material.Id = 16;
+}
+Box639
+{
+   Point1 = 23, 9, 1;
+   Point2 = 24, 10, 2;
+   Material.Id = 1;
+}
+Box640
+{
+   Point1 = 23, 9, 2;
+   Point2 = 24, 10, 3;
+   Material.Id = 1;
+}
+Box641
+{
+   Point1 = 23, 9, 3;
+   Point2 = 24, 10, 4;
+   Material.Id = 1;
+}
+Box642
+{
+   Point1 = 24, 0, 2;
+   Point2 = 25, 1, 3;
+   Material.Id = 9;
+}
+Box643
+{
+   Point1 = 24, 1, 0;
+   Point2 = 25, 2, 1;
+   Material.Id = 17;
+}
+Box644
+{
+   Point1 = 24, 1, 1;
+   Point2 = 25, 2, 2;
+   Material.Id = 6;
+}
+Box645
+{
+   Point1 = 24, 1, 2;
+   Point2 = 25, 2, 3;
+   Material.Id = 6;
+}
+Box646
+{
+   Point1 = 24, 1, 3;
+   Point2 = 25, 2, 4;
+   Material.Id = 6;
+}
+Box647
+{
+   Point1 = 24, 2, 0;
+   Point2 = 25, 3, 1;
+   Material.Id = 17;
+}
+Box648
+{
+   Point1 = 24, 2, 1;
+   Point2 = 25, 3, 2;
+   Material.Id = 1;
+}
+Box649
+{
+   Point1 = 24, 2, 2;
+   Point2 = 25, 3, 3;
+   Material.Id = 1;
+}
+Box650
+{
+   Point1 = 24, 2, 3;
+   Point2 = 25, 3, 4;
+   Material.Id = 1;
+}
+Box651
+{
+   Point1 = 24, 2, 4;
+   Point2 = 25, 3, 5;
+   Material.Id = 6;
+}
+Box652
+{
+   Point1 = 24, 3, 0;
+   Point2 = 25, 4, 1;
+   Material.Id = 17;
+}
+Box653
+{
+   Point1 = 24, 3, 1;
+   Point2 = 25, 4, 2;
+   Material.Id = 1;
+}
+Box654
+{
+   Point1 = 24, 3, 2;
+   Point2 = 25, 4, 3;
+   Material.Id = 1;
+}
+Box655
+{
+   Point1 = 24, 3, 3;
+   Point2 = 25, 4, 4;
+   Material.Id = 1;
+}
+Box656
+{
+   Point1 = 24, 3, 4;
+   Point2 = 25, 4, 5;
+   Material.Id = 17;
+}
+Box657
+{
+   Point1 = 24, 4, 0;
+   Point2 = 25, 5, 1;
+   Material.Id = 17;
+}
+Box658
+{
+   Point1 = 24, 4, 1;
+   Point2 = 25, 5, 2;
+   Material.Id = 1;
+}
+Box659
+{
+   Point1 = 24, 4, 2;
+   Point2 = 25, 5, 3;
+   Material.Id = 1;
+}
+Box660
+{
+   Point1 = 24, 4, 3;
+   Point2 = 25, 5, 4;
+   Material.Id = 1;
+}
+Box661
+{
+   Point1 = 24, 4, 4;
+   Point2 = 25, 5, 5;
+   Material.Id = 14;
+}
+Box662
+{
+   Point1 = 24, 5, 0;
+   Point2 = 25, 6, 1;
+   Material.Id = 14;
+}
+Box663
+{
+   Point1 = 24, 5, 1;
+   Point2 = 25, 6, 2;
+   Material.Id = 1;
+}
+Box664
+{
+   Point1 = 24, 5, 2;
+   Point2 = 25, 6, 3;
+   Material.Id = 1;
+}
+Box665
+{
+   Point1 = 24, 5, 3;
+   Point2 = 25, 6, 4;
+   Material.Id = 1;
+}
+Box666
+{
+   Point1 = 24, 5, 4;
+   Point2 = 25, 6, 5;
+   Material.Id = 17;
+}
+Box667
+{
+   Point1 = 24, 6, 1;
+   Point2 = 25, 7, 2;
+   Material.Id = 1;
+}
+Box668
+{
+   Point1 = 24, 6, 2;
+   Point2 = 25, 7, 3;
+   Material.Id = 1;
+}
+Box669
+{
+   Point1 = 24, 6, 3;
+   Point2 = 25, 7, 4;
+   Material.Id = 1;
+}
+Box670
+{
+   Point1 = 24, 6, 4;
+   Point2 = 25, 7, 5;
+   Material.Id = 1;
+}
+Box671
+{
+   Point1 = 24, 7, 1;
+   Point2 = 25, 8, 2;
+   Material.Id = 3;
+}
+Box672
+{
+   Point1 = 24, 7, 2;
+   Point2 = 25, 8, 3;
+   Material.Id = 1;
+}
+Box673
+{
+   Point1 = 24, 7, 3;
+   Point2 = 25, 8, 4;
+   Material.Id = 1;
+}
+Box674
+{
+   Point1 = 24, 7, 4;
+   Point2 = 25, 8, 5;
+   Material.Id = 1;
+}
+Box675
+{
+   Point1 = 24, 7, 5;
+   Point2 = 25, 8, 6;
+   Material.Id = 16;
+}
+Box676
+{
+   Point1 = 24, 8, 1;
+   Point2 = 25, 9, 2;
+   Material.Id = 1;
+}
+Box677
+{
+   Point1 = 24, 8, 2;
+   Point2 = 25, 9, 3;
+   Material.Id = 1;
+}
+Box678
+{
+   Point1 = 24, 8, 3;
+   Point2 = 25, 9, 4;
+   Material.Id = 1;
+}
+Box679
+{
+   Point1 = 24, 8, 4;
+   Point2 = 25, 9, 5;
+   Material.Id = 1;
+}
+Box680
+{
+   Point1 = 24, 8, 5;
+   Point2 = 25, 9, 6;
+   Material.Id = 16;
+}
+Box681
+{
+   Point1 = 24, 9, 0;
+   Point2 = 25, 10, 1;
+   Material.Id = 16;
+}
+Box682
+{
+   Point1 = 24, 9, 1;
+   Point2 = 25, 10, 2;
+   Material.Id = 1;
+}
+Box683
+{
+   Point1 = 24, 9, 2;
+   Point2 = 25, 10, 3;
+   Material.Id = 1;
+}
+Box684
+{
+   Point1 = 24, 9, 3;
+   Point2 = 25, 10, 4;
+   Material.Id = 1;
+}
+Box685
+{
+   Point1 = 24, 9, 4;
+   Point2 = 25, 10, 5;
+   Material.Id = 1;
+}
+Box686
+{
+   Point1 = 25, 1, 0;
+   Point2 = 26, 2, 1;
+   Material.Id = 17;
+}
+Box687
+{
+   Point1 = 25, 2, 0;
+   Point2 = 26, 3, 1;
+   Material.Id = 17;
+}
+Box688
+{
+   Point1 = 25, 2, 1;
+   Point2 = 26, 3, 2;
+   Material.Id = 6;
+}
+Box689
+{
+   Point1 = 25, 2, 2;
+   Point2 = 26, 3, 3;
+   Material.Id = 6;
+}
+Box690
+{
+   Point1 = 25, 2, 3;
+   Point2 = 26, 3, 4;
+   Material.Id = 6;
+}
+Box691
+{
+   Point1 = 25, 2, 4;
+   Point2 = 26, 3, 5;
+   Material.Id = 6;
+}
+Box692
+{
+   Point1 = 25, 3, 0;
+   Point2 = 26, 4, 1;
+   Material.Id = 17;
+}
+Box693
+{
+   Point1 = 25, 3, 1;
+   Point2 = 26, 4, 2;
+   Material.Id = 1;
+}
+Box694
+{
+   Point1 = 25, 3, 2;
+   Point2 = 26, 4, 3;
+   Material.Id = 1;
+}
+Box695
+{
+   Point1 = 25, 3, 3;
+   Point2 = 26, 4, 4;
+   Material.Id = 1;
+}
+Box696
+{
+   Point1 = 25, 3, 4;
+   Point2 = 26, 4, 5;
+   Material.Id = 17;
+}
+Box697
+{
+   Point1 = 25, 4, 0;
+   Point2 = 26, 5, 1;
+   Material.Id = 17;
+}
+Box698
+{
+   Point1 = 25, 4, 1;
+   Point2 = 26, 5, 2;
+   Material.Id = 1;
+}
+Box699
+{
+   Point1 = 25, 4, 2;
+   Point2 = 26, 5, 3;
+   Material.Id = 1;
+}
+Box700
+{
+   Point1 = 25, 4, 3;
+   Point2 = 26, 5, 4;
+   Material.Id = 1;
+}
+Box701
+{
+   Point1 = 25, 4, 4;
+   Point2 = 26, 5, 5;
+   Material.Id = 14;
+}
+Box702
+{
+   Point1 = 25, 5, 0;
+   Point2 = 26, 6, 1;
+   Material.Id = 14;
+}
+Box703
+{
+   Point1 = 25, 5, 1;
+   Point2 = 26, 6, 2;
+   Material.Id = 1;
+}
+Box704
+{
+   Point1 = 25, 5, 2;
+   Point2 = 26, 6, 3;
+   Material.Id = 1;
+}
+Box705
+{
+   Point1 = 25, 5, 3;
+   Point2 = 26, 6, 4;
+   Material.Id = 1;
+}
+Box706
+{
+   Point1 = 25, 5, 4;
+   Point2 = 26, 6, 5;
+   Material.Id = 17;
+}
+Box707
+{
+   Point1 = 25, 6, 1;
+   Point2 = 26, 7, 2;
+   Material.Id = 1;
+}
+Box708
+{
+   Point1 = 25, 6, 2;
+   Point2 = 26, 7, 3;
+   Material.Id = 1;
+}
+Box709
+{
+   Point1 = 25, 6, 3;
+   Point2 = 26, 7, 4;
+   Material.Id = 1;
+}
+Box710
+{
+   Point1 = 25, 6, 4;
+   Point2 = 26, 7, 5;
+   Material.Id = 1;
+}
+Box711
+{
+   Point1 = 25, 6, 5;
+   Point2 = 26, 7, 6;
+   Material.Id = 16;
+}
+Box712
+{
+   Point1 = 25, 7, 1;
+   Point2 = 26, 8, 2;
+   Material.Id = 1;
+}
+Box713
+{
+   Point1 = 25, 7, 2;
+   Point2 = 26, 8, 3;
+   Material.Id = 1;
+}
+Box714
+{
+   Point1 = 25, 7, 3;
+   Point2 = 26, 8, 4;
+   Material.Id = 1;
+}
+Box715
+{
+   Point1 = 25, 7, 4;
+   Point2 = 26, 8, 5;
+   Material.Id = 1;
+}
+Box716
+{
+   Point1 = 25, 7, 5;
+   Point2 = 26, 8, 6;
+   Material.Id = 16;
+}
+Box717
+{
+   Point1 = 25, 8, 1;
+   Point2 = 26, 9, 2;
+   Material.Id = 1;
+}
+Box718
+{
+   Point1 = 25, 8, 2;
+   Point2 = 26, 9, 3;
+   Material.Id = 1;
+}
+Box719
+{
+   Point1 = 25, 8, 3;
+   Point2 = 26, 9, 4;
+   Material.Id = 1;
+}
+Box720
+{
+   Point1 = 25, 8, 4;
+   Point2 = 26, 9, 5;
+   Material.Id = 1;
+}
+Box721
+{
+   Point1 = 25, 8, 5;
+   Point2 = 26, 9, 6;
+   Material.Id = 16;
+}
+Box722
+{
+   Point1 = 25, 9, 1;
+   Point2 = 26, 10, 2;
+   Material.Id = 1;
+}
+Box723
+{
+   Point1 = 25, 9, 2;
+   Point2 = 26, 10, 3;
+   Material.Id = 1;
+}
+Box724
+{
+   Point1 = 25, 9, 3;
+   Point2 = 26, 10, 4;
+   Material.Id = 1;
+}
+Box725
+{
+   Point1 = 25, 9, 4;
+   Point2 = 26, 10, 5;
+   Material.Id = 1;
+}
+Box726
+{
+   Point1 = 26, 1, 0;
+   Point2 = 27, 2, 1;
+   Material.Id = 17;
+}
+Box727
+{
+   Point1 = 26, 2, 0;
+   Point2 = 27, 3, 1;
+   Material.Id = 17;
+}
+Box728
+{
+   Point1 = 26, 2, 1;
+   Point2 = 27, 3, 2;
+   Material.Id = 6;
+}
+Box729
+{
+   Point1 = 26, 2, 2;
+   Point2 = 27, 3, 3;
+   Material.Id = 6;
+}
+Box730
+{
+   Point1 = 26, 2, 3;
+   Point2 = 27, 3, 4;
+   Material.Id = 6;
+}
+Box731
+{
+   Point1 = 26, 2, 4;
+   Point2 = 27, 3, 5;
+   Material.Id = 6;
+}
+Box732
+{
+   Point1 = 26, 3, 0;
+   Point2 = 27, 4, 1;
+   Material.Id = 17;
+}
+Box733
+{
+   Point1 = 26, 3, 1;
+   Point2 = 27, 4, 2;
+   Material.Id = 1;
+}
+Box734
+{
+   Point1 = 26, 3, 2;
+   Point2 = 27, 4, 3;
+   Material.Id = 1;
+}
+Box735
+{
+   Point1 = 26, 3, 3;
+   Point2 = 27, 4, 4;
+   Material.Id = 1;
+}
+Box736
+{
+   Point1 = 26, 3, 4;
+   Point2 = 27, 4, 5;
+   Material.Id = 17;
+}
+Box737
+{
+   Point1 = 26, 4, 0;
+   Point2 = 27, 5, 1;
+   Material.Id = 17;
+}
+Box738
+{
+   Point1 = 26, 4, 1;
+   Point2 = 27, 5, 2;
+   Material.Id = 1;
+}
+Box739
+{
+   Point1 = 26, 4, 2;
+   Point2 = 27, 5, 3;
+   Material.Id = 1;
+}
+Box740
+{
+   Point1 = 26, 4, 3;
+   Point2 = 27, 5, 4;
+   Material.Id = 1;
+}
+Box741
+{
+   Point1 = 26, 4, 4;
+   Point2 = 27, 5, 5;
+   Material.Id = 14;
+}
+Box742
+{
+   Point1 = 26, 5, 0;
+   Point2 = 27, 6, 1;
+   Material.Id = 14;
+}
+Box743
+{
+   Point1 = 26, 5, 1;
+   Point2 = 27, 6, 2;
+   Material.Id = 1;
+}
+Box744
+{
+   Point1 = 26, 5, 2;
+   Point2 = 27, 6, 3;
+   Material.Id = 1;
+}
+Box745
+{
+   Point1 = 26, 5, 3;
+   Point2 = 27, 6, 4;
+   Material.Id = 1;
+}
+Box746
+{
+   Point1 = 26, 5, 4;
+   Point2 = 27, 6, 5;
+   Material.Id = 17;
+}
+Box747
+{
+   Point1 = 26, 6, 1;
+   Point2 = 27, 7, 2;
+   Material.Id = 1;
+}
+Box748
+{
+   Point1 = 26, 6, 2;
+   Point2 = 27, 7, 3;
+   Material.Id = 1;
+}
+Box749
+{
+   Point1 = 26, 6, 3;
+   Point2 = 27, 7, 4;
+   Material.Id = 1;
+}
+Box750
+{
+   Point1 = 26, 6, 4;
+   Point2 = 27, 7, 5;
+   Material.Id = 1;
+}
+Box751
+{
+   Point1 = 26, 6, 5;
+   Point2 = 27, 7, 6;
+   Material.Id = 16;
+}
+Box752
+{
+   Point1 = 26, 7, 1;
+   Point2 = 27, 8, 2;
+   Material.Id = 1;
+}
+Box753
+{
+   Point1 = 26, 7, 2;
+   Point2 = 27, 8, 3;
+   Material.Id = 1;
+}
+Box754
+{
+   Point1 = 26, 7, 3;
+   Point2 = 27, 8, 4;
+   Material.Id = 1;
+}
+Box755
+{
+   Point1 = 26, 7, 4;
+   Point2 = 27, 8, 5;
+   Material.Id = 1;
+}
+Box756
+{
+   Point1 = 26, 7, 5;
+   Point2 = 27, 8, 6;
+   Material.Id = 16;
+}
+Box757
+{
+   Point1 = 26, 8, 1;
+   Point2 = 27, 9, 2;
+   Material.Id = 1;
+}
+Box758
+{
+   Point1 = 26, 8, 2;
+   Point2 = 27, 9, 3;
+   Material.Id = 1;
+}
+Box759
+{
+   Point1 = 26, 8, 3;
+   Point2 = 27, 9, 4;
+   Material.Id = 1;
+}
+Box760
+{
+   Point1 = 26, 8, 4;
+   Point2 = 27, 9, 5;
+   Material.Id = 1;
+}
+Box761
+{
+   Point1 = 26, 8, 5;
+   Point2 = 27, 9, 6;
+   Material.Id = 16;
+}
+Box762
+{
+   Point1 = 26, 9, 1;
+   Point2 = 27, 10, 2;
+   Material.Id = 1;
+}
+Box763
+{
+   Point1 = 26, 9, 2;
+   Point2 = 27, 10, 3;
+   Material.Id = 1;
+}
+Box764
+{
+   Point1 = 26, 9, 3;
+   Point2 = 27, 10, 4;
+   Material.Id = 1;
+}
+Box765
+{
+   Point1 = 26, 9, 4;
+   Point2 = 27, 10, 5;
+   Material.Id = 1;
+}
+Box766
+{
+   Point1 = 27, 0, 2;
+   Point2 = 28, 1, 3;
+   Material.Id = 7;
+}
+Box767
+{
+   Point1 = 27, 1, 0;
+   Point2 = 28, 2, 1;
+   Material.Id = 17;
+}
+Box768
+{
+   Point1 = 27, 1, 1;
+   Point2 = 28, 2, 2;
+   Material.Id = 6;
+}
+Box769
+{
+   Point1 = 27, 1, 2;
+   Point2 = 28, 2, 3;
+   Material.Id = 6;
+}
+Box770
+{
+   Point1 = 27, 1, 3;
+   Point2 = 28, 2, 4;
+   Material.Id = 6;
+}
+Box771
+{
+   Point1 = 27, 2, 0;
+   Point2 = 28, 3, 1;
+   Material.Id = 17;
+}
+Box772
+{
+   Point1 = 27, 2, 1;
+   Point2 = 28, 3, 2;
+   Material.Id = 1;
+}
+Box773
+{
+   Point1 = 27, 2, 2;
+   Point2 = 28, 3, 3;
+   Material.Id = 1;
+}
+Box774
+{
+   Point1 = 27, 2, 3;
+   Point2 = 28, 3, 4;
+   Material.Id = 1;
+}
+Box775
+{
+   Point1 = 27, 2, 4;
+   Point2 = 28, 3, 5;
+   Material.Id = 6;
+}
+Box776
+{
+   Point1 = 27, 3, 0;
+   Point2 = 28, 4, 1;
+   Material.Id = 17;
+}
+Box777
+{
+   Point1 = 27, 3, 1;
+   Point2 = 28, 4, 2;
+   Material.Id = 1;
+}
+Box778
+{
+   Point1 = 27, 3, 2;
+   Point2 = 28, 4, 3;
+   Material.Id = 1;
+}
+Box779
+{
+   Point1 = 27, 3, 3;
+   Point2 = 28, 4, 4;
+   Material.Id = 1;
+}
+Box780
+{
+   Point1 = 27, 3, 4;
+   Point2 = 28, 4, 5;
+   Material.Id = 17;
+}
+Box781
+{
+   Point1 = 27, 4, 0;
+   Point2 = 28, 5, 1;
+   Material.Id = 17;
+}
+Box782
+{
+   Point1 = 27, 4, 1;
+   Point2 = 28, 5, 2;
+   Material.Id = 1;
+}
+Box783
+{
+   Point1 = 27, 4, 2;
+   Point2 = 28, 5, 3;
+   Material.Id = 1;
+}
+Box784
+{
+   Point1 = 27, 4, 3;
+   Point2 = 28, 5, 4;
+   Material.Id = 1;
+}
+Box785
+{
+   Point1 = 27, 4, 4;
+   Point2 = 28, 5, 5;
+   Material.Id = 14;
+}
+Box786
+{
+   Point1 = 27, 5, 0;
+   Point2 = 28, 6, 1;
+   Material.Id = 14;
+}
+Box787
+{
+   Point1 = 27, 5, 1;
+   Point2 = 28, 6, 2;
+   Material.Id = 1;
+}
+Box788
+{
+   Point1 = 27, 5, 2;
+   Point2 = 28, 6, 3;
+   Material.Id = 1;
+}
+Box789
+{
+   Point1 = 27, 5, 3;
+   Point2 = 28, 6, 4;
+   Material.Id = 1;
+}
+Box790
+{
+   Point1 = 27, 5, 4;
+   Point2 = 28, 6, 5;
+   Material.Id = 17;
+}
+Box791
+{
+   Point1 = 27, 6, 1;
+   Point2 = 28, 7, 2;
+   Material.Id = 1;
+}
+Box792
+{
+   Point1 = 27, 6, 2;
+   Point2 = 28, 7, 3;
+   Material.Id = 1;
+}
+Box793
+{
+   Point1 = 27, 6, 3;
+   Point2 = 28, 7, 4;
+   Material.Id = 1;
+}
+Box794
+{
+   Point1 = 27, 6, 4;
+   Point2 = 28, 7, 5;
+   Material.Id = 1;
+}
+Box795
+{
+   Point1 = 27, 7, 1;
+   Point2 = 28, 8, 2;
+   Material.Id = 3;
+}
+Box796
+{
+   Point1 = 27, 7, 2;
+   Point2 = 28, 8, 3;
+   Material.Id = 1;
+}
+Box797
+{
+   Point1 = 27, 7, 3;
+   Point2 = 28, 8, 4;
+   Material.Id = 1;
+}
+Box798
+{
+   Point1 = 27, 7, 4;
+   Point2 = 28, 8, 5;
+   Material.Id = 1;
+}
+Box799
+{
+   Point1 = 27, 7, 5;
+   Point2 = 28, 8, 6;
+   Material.Id = 16;
+}
+Box800
+{
+   Point1 = 27, 8, 1;
+   Point2 = 28, 9, 2;
+   Material.Id = 1;
+}
+Box801
+{
+   Point1 = 27, 8, 2;
+   Point2 = 28, 9, 3;
+   Material.Id = 1;
+}
+Box802
+{
+   Point1 = 27, 8, 3;
+   Point2 = 28, 9, 4;
+   Material.Id = 1;
+}
+Box803
+{
+   Point1 = 27, 8, 4;
+   Point2 = 28, 9, 5;
+   Material.Id = 1;
+}
+Box804
+{
+   Point1 = 27, 8, 5;
+   Point2 = 28, 9, 6;
+   Material.Id = 16;
+}
+Box805
+{
+   Point1 = 27, 9, 0;
+   Point2 = 28, 10, 1;
+   Material.Id = 16;
+}
+Box806
+{
+   Point1 = 27, 9, 1;
+   Point2 = 28, 10, 2;
+   Material.Id = 1;
+}
+Box807
+{
+   Point1 = 27, 9, 2;
+   Point2 = 28, 10, 3;
+   Material.Id = 1;
+}
+Box808
+{
+   Point1 = 27, 9, 3;
+   Point2 = 28, 10, 4;
+   Material.Id = 1;
+}
+Box809
+{
+   Point1 = 27, 9, 4;
+   Point2 = 28, 10, 5;
+   Material.Id = 1;
+}
+Box810
+{
+   Point1 = 28, 1, 0;
+   Point2 = 29, 2, 1;
+   Material.Id = 17;
+}
+Box811
+{
+   Point1 = 28, 1, 1;
+   Point2 = 29, 2, 2;
+   Material.Id = 6;
+}
+Box812
+{
+   Point1 = 28, 1, 2;
+   Point2 = 29, 2, 3;
+   Material.Id = 6;
+}
+Box813
+{
+   Point1 = 28, 1, 3;
+   Point2 = 29, 2, 4;
+   Material.Id = 6;
+}
+Box814
+{
+   Point1 = 28, 2, 0;
+   Point2 = 29, 3, 1;
+   Material.Id = 17;
+}
+Box815
+{
+   Point1 = 28, 2, 1;
+   Point2 = 29, 3, 2;
+   Material.Id = 6;
+}
+Box816
+{
+   Point1 = 28, 2, 2;
+   Point2 = 29, 3, 3;
+   Material.Id = 6;
+}
+Box817
+{
+   Point1 = 28, 2, 3;
+   Point2 = 29, 3, 4;
+   Material.Id = 6;
+}
+Box818
+{
+   Point1 = 28, 2, 4;
+   Point2 = 29, 3, 5;
+   Material.Id = 6;
+}
+Box819
+{
+   Point1 = 28, 3, 0;
+   Point2 = 29, 4, 1;
+   Material.Id = 17;
+}
+Box820
+{
+   Point1 = 28, 3, 1;
+   Point2 = 29, 4, 2;
+   Material.Id = 17;
+}
+Box821
+{
+   Point1 = 28, 3, 2;
+   Point2 = 29, 4, 3;
+   Material.Id = 17;
+}
+Box822
+{
+   Point1 = 28, 3, 3;
+   Point2 = 29, 4, 4;
+   Material.Id = 17;
+}
+Box823
+{
+   Point1 = 28, 3, 4;
+   Point2 = 29, 4, 5;
+   Material.Id = 17;
+}
+Box824
+{
+   Point1 = 28, 4, 0;
+   Point2 = 29, 5, 1;
+   Material.Id = 17;
+}
+Box825
+{
+   Point1 = 28, 4, 1;
+   Point2 = 29, 5, 2;
+   Material.Id = 14;
+}
+Box826
+{
+   Point1 = 28, 4, 2;
+   Point2 = 29, 5, 3;
+   Material.Id = 14;
+}
+Box827
+{
+   Point1 = 28, 4, 3;
+   Point2 = 29, 5, 4;
+   Material.Id = 14;
+}
+Box828
+{
+   Point1 = 28, 4, 4;
+   Point2 = 29, 5, 5;
+   Material.Id = 14;
+}
+Box829
+{
+   Point1 = 28, 5, 0;
+   Point2 = 29, 6, 1;
+   Material.Id = 17;
+}
+Box830
+{
+   Point1 = 28, 5, 1;
+   Point2 = 29, 6, 2;
+   Material.Id = 17;
+}
+Box831
+{
+   Point1 = 28, 5, 2;
+   Point2 = 29, 6, 3;
+   Material.Id = 1;
+}
+Box832
+{
+   Point1 = 28, 5, 3;
+   Point2 = 29, 6, 4;
+   Material.Id = 17;
+}
+Box833
+{
+   Point1 = 28, 5, 4;
+   Point2 = 29, 6, 5;
+   Material.Id = 17;
+}
+Box834
+{
+   Point1 = 28, 6, 1;
+   Point2 = 29, 7, 2;
+   Material.Id = 1;
+}
+Box835
+{
+   Point1 = 28, 6, 2;
+   Point2 = 29, 7, 3;
+   Material.Id = 1;
+}
+Box836
+{
+   Point1 = 28, 6, 3;
+   Point2 = 29, 7, 4;
+   Material.Id = 1;
+}
+Box837
+{
+   Point1 = 28, 7, 1;
+   Point2 = 29, 8, 2;
+   Material.Id = 1;
+}
+Box838
+{
+   Point1 = 28, 7, 2;
+   Point2 = 29, 8, 3;
+   Material.Id = 1;
+}
+Box839
+{
+   Point1 = 28, 7, 3;
+   Point2 = 29, 8, 4;
+   Material.Id = 1;
+}
+Box840
+{
+   Point1 = 28, 7, 4;
+   Point2 = 29, 8, 5;
+   Material.Id = 16;
+}
+Box841
+{
+   Point1 = 28, 8, 1;
+   Point2 = 29, 9, 2;
+   Material.Id = 1;
+}
+Box842
+{
+   Point1 = 28, 8, 2;
+   Point2 = 29, 9, 3;
+   Material.Id = 1;
+}
+Box843
+{
+   Point1 = 28, 8, 3;
+   Point2 = 29, 9, 4;
+   Material.Id = 1;
+}
+Box844
+{
+   Point1 = 28, 8, 4;
+   Point2 = 29, 9, 5;
+   Material.Id = 16;
+}
+Box845
+{
+   Point1 = 28, 9, 0;
+   Point2 = 29, 10, 1;
+   Material.Id = 16;
+}
+Box846
+{
+   Point1 = 28, 9, 1;
+   Point2 = 29, 10, 2;
+   Material.Id = 1;
+}
+Box847
+{
+   Point1 = 28, 9, 2;
+   Point2 = 29, 10, 3;
+   Material.Id = 1;
+}
+Box848
+{
+   Point1 = 28, 9, 3;
+   Point2 = 29, 10, 4;
+   Material.Id = 1;
+}
+Box849
+{
+   Point1 = 29, 5, 2;
+   Point2 = 30, 6, 3;
+   Material.Id = 14;
+}
+Box850
+{
+   Point1 = 29, 7, 2;
+   Point2 = 30, 8, 3;
+   Material.Id = 15;
+}
+Box851
+{
+   Point1 = 29, 7, 3;
+   Point2 = 30, 8, 4;
+   Material.Id = 16;
+}
+Box852
+{
+   Point1 = 29, 8, 1;
+   Point2 = 30, 9, 2;
+   Material.Id = 16;
+}
+Box853
+{
+   Point1 = 29, 8, 2;
+   Point2 = 30, 9, 3;
+   Material.Id = 16;
+}
+Box854
+{
+   Point1 = 29, 8, 3;
+   Point2 = 30, 9, 4;
+   Material.Id = 16;
+}
+Box855
+{
+   Point1 = 29, 9, 2;
+   Point2 = 30, 10, 3;
+   Material.Id = 16;
+}
+Box856
+{
+   Point1 = 29, 9, 3;
+   Point2 = 30, 10, 4;
+   Material.Id = 16;
+}
+Box857
+{
+   Point1 = 30, 5, 2;
+   Point2 = 31, 6, 3;
+   Material.Id = 14;
+}
+Box858
+{
+   Point1 = 31, 5, 2;
+   Point2 = 32, 6, 3;
+   Material.Id = 1;
+}
+Box859
+{
+   Point1 = 33, 2, 2;
+   Point2 = 34, 3, 3;
+   Material.Id = 1;
+}
+Box860
+{
+   Point1 = 33, 3, 2;
+   Point2 = 34, 4, 3;
+   Material.Id = 1;
+}
+Box861
+{
+   Point1 = 33, 4, 2;
+   Point2 = 34, 5, 3;
+   Material.Id = 17;
+}
+Box862
+{
+   Point1 = 33, 5, 2;
+   Point2 = 34, 6, 3;
+   Material.Id = 17;
+}
+Box863
+{
+   Point1 = 33, 7, 2;
+   Point2 = 34, 8, 3;
+   Material.Id = 1;
+}
+Box864
+{
+   Point1 = 33, 8, 1;
+   Point2 = 34, 9, 2;
+   Material.Id = 9;
+}
+Box865
+{
+   Point1 = 33, 8, 2;
+   Point2 = 34, 9, 3;
+   Material.Id = 9;
+}
+Box866
+{
+   Point1 = 33, 8, 3;
+   Point2 = 34, 9, 4;
+   Material.Id = 9;
+}
+Box867
+{
+   Point1 = 33, 9, 0;
+   Point2 = 34, 10, 1;
+   Material.Id = 9;
+}
+Box868
+{
+   Point1 = 33, 9, 1;
+   Point2 = 34, 10, 2;
+   Material.Id = 9;
+}
+Box869
+{
+   Point1 = 33, 9, 2;
+   Point2 = 34, 10, 3;
+   Material.Id = 9;
+}
+Box870
+{
+   Point1 = 33, 9, 3;
+   Point2 = 34, 10, 4;
+   Material.Id = 9;
+}
+Box871
+{
+   Point1 = 34, 1, 1;
+   Point2 = 35, 2, 2;
+   Material.Id = 9;
+}
+Box872
+{
+   Point1 = 34, 1, 2;
+   Point2 = 35, 2, 3;
+   Material.Id = 9;
+}
+Box873
+{
+   Point1 = 34, 1, 3;
+   Point2 = 35, 2, 4;
+   Material.Id = 9;
+}
+Box874
+{
+   Point1 = 34, 2, 0;
+   Point2 = 35, 3, 1;
+   Material.Id = 9;
+}
+Box875
+{
+   Point1 = 34, 2, 1;
+   Point2 = 35, 3, 2;
+   Material.Id = 9;
+}
+Box876
+{
+   Point1 = 34, 2, 2;
+   Point2 = 35, 3, 3;
+   Material.Id = 1;
+}
+Box877
+{
+   Point1 = 34, 2, 3;
+   Point2 = 35, 3, 4;
+   Material.Id = 9;
+}
+Box878
+{
+   Point1 = 34, 2, 4;
+   Point2 = 35, 3, 5;
+   Material.Id = 9;
+}
+Box879
+{
+   Point1 = 34, 3, 0;
+   Point2 = 35, 4, 1;
+   Material.Id = 17;
+}
+Box880
+{
+   Point1 = 34, 3, 1;
+   Point2 = 35, 4, 2;
+   Material.Id = 17;
+}
+Box881
+{
+   Point1 = 34, 3, 2;
+   Point2 = 35, 4, 3;
+   Material.Id = 1;
+}
+Box882
+{
+   Point1 = 34, 3, 3;
+   Point2 = 35, 4, 4;
+   Material.Id = 17;
+}
+Box883
+{
+   Point1 = 34, 3, 4;
+   Point2 = 35, 4, 5;
+   Material.Id = 17;
+}
+Box884
+{
+   Point1 = 34, 4, 0;
+   Point2 = 35, 5, 1;
+   Material.Id = 17;
+}
+Box885
+{
+   Point1 = 34, 4, 1;
+   Point2 = 35, 5, 2;
+   Material.Id = 17;
+}
+Box886
+{
+   Point1 = 34, 4, 2;
+   Point2 = 35, 5, 3;
+   Material.Id = 1;
+}
+Box887
+{
+   Point1 = 34, 4, 3;
+   Point2 = 35, 5, 4;
+   Material.Id = 17;
+}
+Box888
+{
+   Point1 = 34, 4, 4;
+   Point2 = 35, 5, 5;
+   Material.Id = 17;
+}
+Box889
+{
+   Point1 = 34, 5, 0;
+   Point2 = 35, 6, 1;
+   Material.Id = 17;
+}
+Box890
+{
+   Point1 = 34, 5, 1;
+   Point2 = 35, 6, 2;
+   Material.Id = 17;
+}
+Box891
+{
+   Point1 = 34, 5, 2;
+   Point2 = 35, 6, 3;
+   Material.Id = 1;
+}
+Box892
+{
+   Point1 = 34, 5, 3;
+   Point2 = 35, 6, 4;
+   Material.Id = 17;
+}
+Box893
+{
+   Point1 = 34, 5, 4;
+   Point2 = 35, 6, 5;
+   Material.Id = 17;
+}
+Box894
+{
+   Point1 = 34, 6, 1;
+   Point2 = 35, 7, 2;
+   Material.Id = 1;
+}
+Box895
+{
+   Point1 = 34, 6, 2;
+   Point2 = 35, 7, 3;
+   Material.Id = 1;
+}
+Box896
+{
+   Point1 = 34, 6, 3;
+   Point2 = 35, 7, 4;
+   Material.Id = 1;
+}
+Box897
+{
+   Point1 = 34, 7, 1;
+   Point2 = 35, 8, 2;
+   Material.Id = 1;
+}
+Box898
+{
+   Point1 = 34, 7, 2;
+   Point2 = 35, 8, 3;
+   Material.Id = 1;
+}
+Box899
+{
+   Point1 = 34, 7, 3;
+   Point2 = 35, 8, 4;
+   Material.Id = 1;
+}
+Box900
+{
+   Point1 = 34, 7, 4;
+   Point2 = 35, 8, 5;
+   Material.Id = 9;
+}
+Box901
+{
+   Point1 = 34, 8, 1;
+   Point2 = 35, 9, 2;
+   Material.Id = 1;
+}
+Box902
+{
+   Point1 = 34, 8, 2;
+   Point2 = 35, 9, 3;
+   Material.Id = 1;
+}
+Box903
+{
+   Point1 = 34, 8, 3;
+   Point2 = 35, 9, 4;
+   Material.Id = 1;
+}
+Box904
+{
+   Point1 = 34, 8, 4;
+   Point2 = 35, 9, 5;
+   Material.Id = 9;
+}
+Box905
+{
+   Point1 = 34, 9, 0;
+   Point2 = 35, 10, 1;
+   Material.Id = 9;
+}
+Box906
+{
+   Point1 = 34, 9, 1;
+   Point2 = 35, 10, 2;
+   Material.Id = 1;
+}
+Box907
+{
+   Point1 = 34, 9, 2;
+   Point2 = 35, 10, 3;
+   Material.Id = 1;
+}
+Box908
+{
+   Point1 = 34, 9, 3;
+   Point2 = 35, 10, 4;
+   Material.Id = 1;
+}
+Box909
+{
+   Point1 = 34, 9, 4;
+   Point2 = 35, 10, 5;
+   Material.Id = 9;
+}
+Box910
+{
+   Point1 = 34, 10, 0;
+   Point2 = 35, 11, 1;
+   Material.Id = 9;
+}
+Box911
+{
+   Point1 = 34, 10, 1;
+   Point2 = 35, 11, 2;
+   Material.Id = 9;
+}
+Box912
+{
+   Point1 = 34, 10, 2;
+   Point2 = 35, 11, 3;
+   Material.Id = 9;
+}
+Box913
+{
+   Point1 = 34, 10, 3;
+   Point2 = 35, 11, 4;
+   Material.Id = 9;
+}
+Box914
+{
+   Point1 = 34, 10, 4;
+   Point2 = 35, 11, 5;
+   Material.Id = 9;
+}
+Box915
+{
+   Point1 = 35, 0, 2;
+   Point2 = 36, 1, 3;
+   Material.Id = 7;
+}
+Box916
+{
+   Point1 = 35, 1, 1;
+   Point2 = 36, 2, 2;
+   Material.Id = 9;
+}
+Box917
+{
+   Point1 = 35, 1, 2;
+   Point2 = 36, 2, 3;
+   Material.Id = 9;
+}
+Box918
+{
+   Point1 = 35, 1, 3;
+   Point2 = 36, 2, 4;
+   Material.Id = 9;
+}
+Box919
+{
+   Point1 = 35, 2, 0;
+   Point2 = 36, 3, 1;
+   Material.Id = 9;
+}
+Box920
+{
+   Point1 = 35, 2, 1;
+   Point2 = 36, 3, 2;
+   Material.Id = 1;
+}
+Box921
+{
+   Point1 = 35, 2, 2;
+   Point2 = 36, 3, 3;
+   Material.Id = 1;
+}
+Box922
+{
+   Point1 = 35, 2, 3;
+   Point2 = 36, 3, 4;
+   Material.Id = 1;
+}
+Box923
+{
+   Point1 = 35, 2, 4;
+   Point2 = 36, 3, 5;
+   Material.Id = 9;
+}
+Box924
+{
+   Point1 = 35, 3, 0;
+   Point2 = 36, 4, 1;
+   Material.Id = 17;
+}
+Box925
+{
+   Point1 = 35, 3, 1;
+   Point2 = 36, 4, 2;
+   Material.Id = 1;
+}
+Box926
+{
+   Point1 = 35, 3, 2;
+   Point2 = 36, 4, 3;
+   Material.Id = 1;
+}
+Box927
+{
+   Point1 = 35, 3, 3;
+   Point2 = 36, 4, 4;
+   Material.Id = 1;
+}
+Box928
+{
+   Point1 = 35, 3, 4;
+   Point2 = 36, 4, 5;
+   Material.Id = 17;
+}
+Box929
+{
+   Point1 = 35, 4, 0;
+   Point2 = 36, 5, 1;
+   Material.Id = 17;
+}
+Box930
+{
+   Point1 = 35, 4, 1;
+   Point2 = 36, 5, 2;
+   Material.Id = 1;
+}
+Box931
+{
+   Point1 = 35, 4, 2;
+   Point2 = 36, 5, 3;
+   Material.Id = 1;
+}
+Box932
+{
+   Point1 = 35, 4, 3;
+   Point2 = 36, 5, 4;
+   Material.Id = 1;
+}
+Box933
+{
+   Point1 = 35, 4, 4;
+   Point2 = 36, 5, 5;
+   Material.Id = 17;
+}
+Box934
+{
+   Point1 = 35, 5, 0;
+   Point2 = 36, 6, 1;
+   Material.Id = 17;
+}
+Box935
+{
+   Point1 = 35, 5, 1;
+   Point2 = 36, 6, 2;
+   Material.Id = 1;
+}
+Box936
+{
+   Point1 = 35, 5, 2;
+   Point2 = 36, 6, 3;
+   Material.Id = 1;
+}
+Box937
+{
+   Point1 = 35, 5, 3;
+   Point2 = 36, 6, 4;
+   Material.Id = 1;
+}
+Box938
+{
+   Point1 = 35, 5, 4;
+   Point2 = 36, 6, 5;
+   Material.Id = 17;
+}
+Box939
+{
+   Point1 = 35, 6, 1;
+   Point2 = 36, 7, 2;
+   Material.Id = 1;
+}
+Box940
+{
+   Point1 = 35, 6, 2;
+   Point2 = 36, 7, 3;
+   Material.Id = 1;
+}
+Box941
+{
+   Point1 = 35, 6, 3;
+   Point2 = 36, 7, 4;
+   Material.Id = 1;
+}
+Box942
+{
+   Point1 = 35, 6, 4;
+   Point2 = 36, 7, 5;
+   Material.Id = 1;
+}
+Box943
+{
+   Point1 = 35, 7, 1;
+   Point2 = 36, 8, 2;
+   Material.Id = 3;
+}
+Box944
+{
+   Point1 = 35, 7, 2;
+   Point2 = 36, 8, 3;
+   Material.Id = 1;
+}
+Box945
+{
+   Point1 = 35, 7, 3;
+   Point2 = 36, 8, 4;
+   Material.Id = 1;
+}
+Box946
+{
+   Point1 = 35, 7, 4;
+   Point2 = 36, 8, 5;
+   Material.Id = 1;
+}
+Box947
+{
+   Point1 = 35, 7, 5;
+   Point2 = 36, 8, 6;
+   Material.Id = 9;
+}
+Box948
+{
+   Point1 = 35, 8, 1;
+   Point2 = 36, 9, 2;
+   Material.Id = 1;
+}
+Box949
+{
+   Point1 = 35, 8, 2;
+   Point2 = 36, 9, 3;
+   Material.Id = 1;
+}
+Box950
+{
+   Point1 = 35, 8, 3;
+   Point2 = 36, 9, 4;
+   Material.Id = 1;
+}
+Box951
+{
+   Point1 = 35, 8, 4;
+   Point2 = 36, 9, 5;
+   Material.Id = 1;
+}
+Box952
+{
+   Point1 = 35, 8, 5;
+   Point2 = 36, 9, 6;
+   Material.Id = 9;
+}
+Box953
+{
+   Point1 = 35, 9, 0;
+   Point2 = 36, 10, 1;
+   Material.Id = 9;
+}
+Box954
+{
+   Point1 = 35, 9, 1;
+   Point2 = 36, 10, 2;
+   Material.Id = 1;
+}
+Box955
+{
+   Point1 = 35, 9, 2;
+   Point2 = 36, 10, 3;
+   Material.Id = 1;
+}
+Box956
+{
+   Point1 = 35, 9, 3;
+   Point2 = 36, 10, 4;
+   Material.Id = 1;
+}
+Box957
+{
+   Point1 = 35, 9, 4;
+   Point2 = 36, 10, 5;
+   Material.Id = 1;
+}
+Box958
+{
+   Point1 = 35, 9, 5;
+   Point2 = 36, 10, 6;
+   Material.Id = 9;
+}
+Box959
+{
+   Point1 = 35, 10, 1;
+   Point2 = 36, 11, 2;
+   Material.Id = 9;
+}
+Box960
+{
+   Point1 = 35, 10, 2;
+   Point2 = 36, 11, 3;
+   Material.Id = 9;
+}
+Box961
+{
+   Point1 = 35, 10, 3;
+   Point2 = 36, 11, 4;
+   Material.Id = 9;
+}
+Box962
+{
+   Point1 = 35, 10, 4;
+   Point2 = 36, 11, 5;
+   Material.Id = 9;
+}
+Box963
+{
+   Point1 = 36, 2, 0;
+   Point2 = 37, 3, 1;
+   Material.Id = 9;
+}
+Box964
+{
+   Point1 = 36, 2, 1;
+   Point2 = 37, 3, 2;
+   Material.Id = 9;
+}
+Box965
+{
+   Point1 = 36, 2, 2;
+   Point2 = 37, 3, 3;
+   Material.Id = 9;
+}
+Box966
+{
+   Point1 = 36, 2, 3;
+   Point2 = 37, 3, 4;
+   Material.Id = 9;
+}
+Box967
+{
+   Point1 = 36, 2, 4;
+   Point2 = 37, 3, 5;
+   Material.Id = 9;
+}
+Box968
+{
+   Point1 = 36, 3, 0;
+   Point2 = 37, 4, 1;
+   Material.Id = 17;
+}
+Box969
+{
+   Point1 = 36, 3, 1;
+   Point2 = 37, 4, 2;
+   Material.Id = 1;
+}
+Box970
+{
+   Point1 = 36, 3, 2;
+   Point2 = 37, 4, 3;
+   Material.Id = 1;
+}
+Box971
+{
+   Point1 = 36, 3, 3;
+   Point2 = 37, 4, 4;
+   Material.Id = 1;
+}
+Box972
+{
+   Point1 = 36, 3, 4;
+   Point2 = 37, 4, 5;
+   Material.Id = 17;
+}
+Box973
+{
+   Point1 = 36, 4, 0;
+   Point2 = 37, 5, 1;
+   Material.Id = 7;
+}
+Box974
+{
+   Point1 = 36, 4, 1;
+   Point2 = 37, 5, 2;
+   Material.Id = 1;
+}
+Box975
+{
+   Point1 = 36, 4, 2;
+   Point2 = 37, 5, 3;
+   Material.Id = 1;
+}
+Box976
+{
+   Point1 = 36, 4, 3;
+   Point2 = 37, 5, 4;
+   Material.Id = 1;
+}
+Box977
+{
+   Point1 = 36, 4, 4;
+   Point2 = 37, 5, 5;
+   Material.Id = 17;
+}
+Box978
+{
+   Point1 = 36, 5, 0;
+   Point2 = 37, 6, 1;
+   Material.Id = 7;
+}
+Box979
+{
+   Point1 = 36, 5, 1;
+   Point2 = 37, 6, 2;
+   Material.Id = 1;
+}
+Box980
+{
+   Point1 = 36, 5, 2;
+   Point2 = 37, 6, 3;
+   Material.Id = 1;
+}
+Box981
+{
+   Point1 = 36, 5, 3;
+   Point2 = 37, 6, 4;
+   Material.Id = 1;
+}
+Box982
+{
+   Point1 = 36, 5, 4;
+   Point2 = 37, 6, 5;
+   Material.Id = 17;
+}
+Box983
+{
+   Point1 = 36, 6, 1;
+   Point2 = 37, 7, 2;
+   Material.Id = 1;
+}
+Box984
+{
+   Point1 = 36, 6, 2;
+   Point2 = 37, 7, 3;
+   Material.Id = 1;
+}
+Box985
+{
+   Point1 = 36, 6, 3;
+   Point2 = 37, 7, 4;
+   Material.Id = 1;
+}
+Box986
+{
+   Point1 = 36, 6, 4;
+   Point2 = 37, 7, 5;
+   Material.Id = 1;
+}
+Box987
+{
+   Point1 = 36, 7, 1;
+   Point2 = 37, 8, 2;
+   Material.Id = 1;
+}
+Box988
+{
+   Point1 = 36, 7, 2;
+   Point2 = 37, 8, 3;
+   Material.Id = 1;
+}
+Box989
+{
+   Point1 = 36, 7, 3;
+   Point2 = 37, 8, 4;
+   Material.Id = 1;
+}
+Box990
+{
+   Point1 = 36, 7, 4;
+   Point2 = 37, 8, 5;
+   Material.Id = 1;
+}
+Box991
+{
+   Point1 = 36, 7, 5;
+   Point2 = 37, 8, 6;
+   Material.Id = 9;
+}
+Box992
+{
+   Point1 = 36, 8, 1;
+   Point2 = 37, 9, 2;
+   Material.Id = 1;
+}
+Box993
+{
+   Point1 = 36, 8, 2;
+   Point2 = 37, 9, 3;
+   Material.Id = 1;
+}
+Box994
+{
+   Point1 = 36, 8, 3;
+   Point2 = 37, 9, 4;
+   Material.Id = 1;
+}
+Box995
+{
+   Point1 = 36, 8, 4;
+   Point2 = 37, 9, 5;
+   Material.Id = 1;
+}
+Box996
+{
+   Point1 = 36, 8, 5;
+   Point2 = 37, 9, 6;
+   Material.Id = 9;
+}
+Box997
+{
+   Point1 = 36, 9, 0;
+   Point2 = 37, 10, 1;
+   Material.Id = 9;
+}
+Box998
+{
+   Point1 = 36, 9, 1;
+   Point2 = 37, 10, 2;
+   Material.Id = 1;
+}
+Box999
+{
+   Point1 = 36, 9, 2;
+   Point2 = 37, 10, 3;
+   Material.Id = 1;
+}
+Box1000
+{
+   Point1 = 36, 9, 3;
+   Point2 = 37, 10, 4;
+   Material.Id = 1;
+}
+Box1001
+{
+   Point1 = 36, 9, 4;
+   Point2 = 37, 10, 5;
+   Material.Id = 1;
+}
+Box1002
+{
+   Point1 = 36, 9, 5;
+   Point2 = 37, 10, 6;
+   Material.Id = 9;
+}
+Box1003
+{
+   Point1 = 36, 10, 1;
+   Point2 = 37, 11, 2;
+   Material.Id = 9;
+}
+Box1004
+{
+   Point1 = 36, 10, 2;
+   Point2 = 37, 11, 3;
+   Material.Id = 9;
+}
+Box1005
+{
+   Point1 = 36, 10, 3;
+   Point2 = 37, 11, 4;
+   Material.Id = 9;
+}
+Box1006
+{
+   Point1 = 36, 10, 4;
+   Point2 = 37, 11, 5;
+   Material.Id = 9;
+}
+Box1007
+{
+   Point1 = 37, 2, 0;
+   Point2 = 38, 3, 1;
+   Material.Id = 9;
+}
+Box1008
+{
+   Point1 = 37, 2, 1;
+   Point2 = 38, 3, 2;
+   Material.Id = 9;
+}
+Box1009
+{
+   Point1 = 37, 2, 2;
+   Point2 = 38, 3, 3;
+   Material.Id = 9;
+}
+Box1010
+{
+   Point1 = 37, 2, 3;
+   Point2 = 38, 3, 4;
+   Material.Id = 9;
+}
+Box1011
+{
+   Point1 = 37, 2, 4;
+   Point2 = 38, 3, 5;
+   Material.Id = 9;
+}
+Box1012
+{
+   Point1 = 37, 3, 0;
+   Point2 = 38, 4, 1;
+   Material.Id = 17;
+}
+Box1013
+{
+   Point1 = 37, 3, 1;
+   Point2 = 38, 4, 2;
+   Material.Id = 1;
+}
+Box1014
+{
+   Point1 = 37, 3, 2;
+   Point2 = 38, 4, 3;
+   Material.Id = 1;
+}
+Box1015
+{
+   Point1 = 37, 3, 3;
+   Point2 = 38, 4, 4;
+   Material.Id = 1;
+}
+Box1016
+{
+   Point1 = 37, 3, 4;
+   Point2 = 38, 4, 5;
+   Material.Id = 17;
+}
+Box1017
+{
+   Point1 = 37, 4, 0;
+   Point2 = 38, 5, 1;
+   Material.Id = 17;
+}
+Box1018
+{
+   Point1 = 37, 4, 1;
+   Point2 = 38, 5, 2;
+   Material.Id = 1;
+}
+Box1019
+{
+   Point1 = 37, 4, 2;
+   Point2 = 38, 5, 3;
+   Material.Id = 1;
+}
+Box1020
+{
+   Point1 = 37, 4, 3;
+   Point2 = 38, 5, 4;
+   Material.Id = 1;
+}
+Box1021
+{
+   Point1 = 37, 4, 4;
+   Point2 = 38, 5, 5;
+   Material.Id = 17;
+}
+Box1022
+{
+   Point1 = 37, 5, 0;
+   Point2 = 38, 6, 1;
+   Material.Id = 17;
+}
+Box1023
+{
+   Point1 = 37, 5, 1;
+   Point2 = 38, 6, 2;
+   Material.Id = 1;
+}
+Box1024
+{
+   Point1 = 37, 5, 2;
+   Point2 = 38, 6, 3;
+   Material.Id = 1;
+}
+Box1025
+{
+   Point1 = 37, 5, 3;
+   Point2 = 38, 6, 4;
+   Material.Id = 1;
+}
+Box1026
+{
+   Point1 = 37, 5, 4;
+   Point2 = 38, 6, 5;
+   Material.Id = 17;
+}
+Box1027
+{
+   Point1 = 37, 6, 1;
+   Point2 = 38, 7, 2;
+   Material.Id = 1;
+}
+Box1028
+{
+   Point1 = 37, 6, 2;
+   Point2 = 38, 7, 3;
+   Material.Id = 1;
+}
+Box1029
+{
+   Point1 = 37, 6, 3;
+   Point2 = 38, 7, 4;
+   Material.Id = 1;
+}
+Box1030
+{
+   Point1 = 37, 6, 4;
+   Point2 = 38, 7, 5;
+   Material.Id = 1;
+}
+Box1031
+{
+   Point1 = 37, 7, 1;
+   Point2 = 38, 8, 2;
+   Material.Id = 1;
+}
+Box1032
+{
+   Point1 = 37, 7, 2;
+   Point2 = 38, 8, 3;
+   Material.Id = 1;
+}
+Box1033
+{
+   Point1 = 37, 7, 3;
+   Point2 = 38, 8, 4;
+   Material.Id = 1;
+}
+Box1034
+{
+   Point1 = 37, 7, 4;
+   Point2 = 38, 8, 5;
+   Material.Id = 1;
+}
+Box1035
+{
+   Point1 = 37, 7, 5;
+   Point2 = 38, 8, 6;
+   Material.Id = 9;
+}
+Box1036
+{
+   Point1 = 37, 8, 1;
+   Point2 = 38, 9, 2;
+   Material.Id = 1;
+}
+Box1037
+{
+   Point1 = 37, 8, 2;
+   Point2 = 38, 9, 3;
+   Material.Id = 1;
+}
+Box1038
+{
+   Point1 = 37, 8, 3;
+   Point2 = 38, 9, 4;
+   Material.Id = 1;
+}
+Box1039
+{
+   Point1 = 37, 8, 4;
+   Point2 = 38, 9, 5;
+   Material.Id = 1;
+}
+Box1040
+{
+   Point1 = 37, 8, 5;
+   Point2 = 38, 9, 6;
+   Material.Id = 9;
+}
+Box1041
+{
+   Point1 = 37, 9, 1;
+   Point2 = 38, 10, 2;
+   Material.Id = 1;
+}
+Box1042
+{
+   Point1 = 37, 9, 2;
+   Point2 = 38, 10, 3;
+   Material.Id = 1;
+}
+Box1043
+{
+   Point1 = 37, 9, 3;
+   Point2 = 38, 10, 4;
+   Material.Id = 1;
+}
+Box1044
+{
+   Point1 = 37, 9, 4;
+   Point2 = 38, 10, 5;
+   Material.Id = 1;
+}
+Box1045
+{
+   Point1 = 37, 9, 5;
+   Point2 = 38, 10, 6;
+   Material.Id = 9;
+}
+Box1046
+{
+   Point1 = 37, 10, 1;
+   Point2 = 38, 11, 2;
+   Material.Id = 9;
+}
+Box1047
+{
+   Point1 = 37, 10, 2;
+   Point2 = 38, 11, 3;
+   Material.Id = 9;
+}
+Box1048
+{
+   Point1 = 37, 10, 3;
+   Point2 = 38, 11, 4;
+   Material.Id = 9;
+}
+Box1049
+{
+   Point1 = 37, 10, 4;
+   Point2 = 38, 11, 5;
+   Material.Id = 9;
+}
+Box1050
+{
+   Point1 = 38, 0, 2;
+   Point2 = 39, 1, 3;
+   Material.Id = 7;
+}
+Box1051
+{
+   Point1 = 38, 1, 1;
+   Point2 = 39, 2, 2;
+   Material.Id = 9;
+}
+Box1052
+{
+   Point1 = 38, 1, 2;
+   Point2 = 39, 2, 3;
+   Material.Id = 9;
+}
+Box1053
+{
+   Point1 = 38, 1, 3;
+   Point2 = 39, 2, 4;
+   Material.Id = 9;
+}
+Box1054
+{
+   Point1 = 38, 2, 0;
+   Point2 = 39, 3, 1;
+   Material.Id = 9;
+}
+Box1055
+{
+   Point1 = 38, 2, 1;
+   Point2 = 39, 3, 2;
+   Material.Id = 1;
+}
+Box1056
+{
+   Point1 = 38, 2, 2;
+   Point2 = 39, 3, 3;
+   Material.Id = 1;
+}
+Box1057
+{
+   Point1 = 38, 2, 3;
+   Point2 = 39, 3, 4;
+   Material.Id = 1;
+}
+Box1058
+{
+   Point1 = 38, 2, 4;
+   Point2 = 39, 3, 5;
+   Material.Id = 9;
+}
+Box1059
+{
+   Point1 = 38, 3, 0;
+   Point2 = 39, 4, 1;
+   Material.Id = 17;
+}
+Box1060
+{
+   Point1 = 38, 3, 1;
+   Point2 = 39, 4, 2;
+   Material.Id = 1;
+}
+Box1061
+{
+   Point1 = 38, 3, 2;
+   Point2 = 39, 4, 3;
+   Material.Id = 1;
+}
+Box1062
+{
+   Point1 = 38, 3, 3;
+   Point2 = 39, 4, 4;
+   Material.Id = 1;
+}
+Box1063
+{
+   Point1 = 38, 3, 4;
+   Point2 = 39, 4, 5;
+   Material.Id = 17;
+}
+Box1064
+{
+   Point1 = 38, 4, 0;
+   Point2 = 39, 5, 1;
+   Material.Id = 6;
+}
+Box1065
+{
+   Point1 = 38, 4, 1;
+   Point2 = 39, 5, 2;
+   Material.Id = 1;
+}
+Box1066
+{
+   Point1 = 38, 4, 2;
+   Point2 = 39, 5, 3;
+   Material.Id = 1;
+}
+Box1067
+{
+   Point1 = 38, 4, 3;
+   Point2 = 39, 5, 4;
+   Material.Id = 1;
+}
+Box1068
+{
+   Point1 = 38, 4, 4;
+   Point2 = 39, 5, 5;
+   Material.Id = 17;
+}
+Box1069
+{
+   Point1 = 38, 5, 0;
+   Point2 = 39, 6, 1;
+   Material.Id = 17;
+}
+Box1070
+{
+   Point1 = 38, 5, 1;
+   Point2 = 39, 6, 2;
+   Material.Id = 1;
+}
+Box1071
+{
+   Point1 = 38, 5, 2;
+   Point2 = 39, 6, 3;
+   Material.Id = 1;
+}
+Box1072
+{
+   Point1 = 38, 5, 3;
+   Point2 = 39, 6, 4;
+   Material.Id = 1;
+}
+Box1073
+{
+   Point1 = 38, 5, 4;
+   Point2 = 39, 6, 5;
+   Material.Id = 17;
+}
+Box1074
+{
+   Point1 = 38, 6, 1;
+   Point2 = 39, 7, 2;
+   Material.Id = 1;
+}
+Box1075
+{
+   Point1 = 38, 6, 2;
+   Point2 = 39, 7, 3;
+   Material.Id = 1;
+}
+Box1076
+{
+   Point1 = 38, 6, 3;
+   Point2 = 39, 7, 4;
+   Material.Id = 1;
+}
+Box1077
+{
+   Point1 = 38, 6, 4;
+   Point2 = 39, 7, 5;
+   Material.Id = 1;
+}
+Box1078
+{
+   Point1 = 38, 7, 1;
+   Point2 = 39, 8, 2;
+   Material.Id = 3;
+}
+Box1079
+{
+   Point1 = 38, 7, 2;
+   Point2 = 39, 8, 3;
+   Material.Id = 1;
+}
+Box1080
+{
+   Point1 = 38, 7, 3;
+   Point2 = 39, 8, 4;
+   Material.Id = 1;
+}
+Box1081
+{
+   Point1 = 38, 7, 4;
+   Point2 = 39, 8, 5;
+   Material.Id = 1;
+}
+Box1082
+{
+   Point1 = 38, 7, 5;
+   Point2 = 39, 8, 6;
+   Material.Id = 9;
+}
+Box1083
+{
+   Point1 = 38, 8, 1;
+   Point2 = 39, 9, 2;
+   Material.Id = 1;
+}
+Box1084
+{
+   Point1 = 38, 8, 2;
+   Point2 = 39, 9, 3;
+   Material.Id = 1;
+}
+Box1085
+{
+   Point1 = 38, 8, 3;
+   Point2 = 39, 9, 4;
+   Material.Id = 1;
+}
+Box1086
+{
+   Point1 = 38, 8, 4;
+   Point2 = 39, 9, 5;
+   Material.Id = 1;
+}
+Box1087
+{
+   Point1 = 38, 8, 5;
+   Point2 = 39, 9, 6;
+   Material.Id = 9;
+}
+Box1088
+{
+   Point1 = 38, 9, 1;
+   Point2 = 39, 10, 2;
+   Material.Id = 1;
+}
+Box1089
+{
+   Point1 = 38, 9, 2;
+   Point2 = 39, 10, 3;
+   Material.Id = 1;
+}
+Box1090
+{
+   Point1 = 38, 9, 3;
+   Point2 = 39, 10, 4;
+   Material.Id = 1;
+}
+Box1091
+{
+   Point1 = 38, 9, 4;
+   Point2 = 39, 10, 5;
+   Material.Id = 1;
+}
+Box1092
+{
+   Point1 = 38, 9, 5;
+   Point2 = 39, 10, 6;
+   Material.Id = 9;
+}
+Box1093
+{
+   Point1 = 38, 10, 2;
+   Point2 = 39, 11, 3;
+   Material.Id = 9;
+}
+Box1094
+{
+   Point1 = 38, 10, 3;
+   Point2 = 39, 11, 4;
+   Material.Id = 9;
+}
+Box1095
+{
+   Point1 = 38, 10, 4;
+   Point2 = 39, 11, 5;
+   Material.Id = 9;
+}
+Box1096
+{
+   Point1 = 39, 1, 1;
+   Point2 = 40, 2, 2;
+   Material.Id = 9;
+}
+Box1097
+{
+   Point1 = 39, 1, 2;
+   Point2 = 40, 2, 3;
+   Material.Id = 9;
+}
+Box1098
+{
+   Point1 = 39, 1, 3;
+   Point2 = 40, 2, 4;
+   Material.Id = 9;
+}
+Box1099
+{
+   Point1 = 39, 2, 0;
+   Point2 = 40, 3, 1;
+   Material.Id = 9;
+}
+Box1100
+{
+   Point1 = 39, 2, 1;
+   Point2 = 40, 3, 2;
+   Material.Id = 9;
+}
+Box1101
+{
+   Point1 = 39, 2, 2;
+   Point2 = 40, 3, 3;
+   Material.Id = 1;
+}
+Box1102
+{
+   Point1 = 39, 2, 3;
+   Point2 = 40, 3, 4;
+   Material.Id = 9;
+}
+Box1103
+{
+   Point1 = 39, 2, 4;
+   Point2 = 40, 3, 5;
+   Material.Id = 9;
+}
+Box1104
+{
+   Point1 = 39, 3, 0;
+   Point2 = 40, 4, 1;
+   Material.Id = 17;
+}
+Box1105
+{
+   Point1 = 39, 3, 1;
+   Point2 = 40, 4, 2;
+   Material.Id = 17;
+}
+Box1106
+{
+   Point1 = 39, 3, 2;
+   Point2 = 40, 4, 3;
+   Material.Id = 1;
+}
+Box1107
+{
+   Point1 = 39, 3, 3;
+   Point2 = 40, 4, 4;
+   Material.Id = 17;
+}
+Box1108
+{
+   Point1 = 39, 3, 4;
+   Point2 = 40, 4, 5;
+   Material.Id = 17;
+}
+Box1109
+{
+   Point1 = 39, 4, 0;
+   Point2 = 40, 5, 1;
+   Material.Id = 6;
+}
+Box1110
+{
+   Point1 = 39, 4, 1;
+   Point2 = 40, 5, 2;
+   Material.Id = 17;
+}
+Box1111
+{
+   Point1 = 39, 4, 2;
+   Point2 = 40, 5, 3;
+   Material.Id = 1;
+}
+Box1112
+{
+   Point1 = 39, 4, 3;
+   Point2 = 40, 5, 4;
+   Material.Id = 17;
+}
+Box1113
+{
+   Point1 = 39, 4, 4;
+   Point2 = 40, 5, 5;
+   Material.Id = 17;
+}
+Box1114
+{
+   Point1 = 39, 5, 0;
+   Point2 = 40, 6, 1;
+   Material.Id = 17;
+}
+Box1115
+{
+   Point1 = 39, 5, 1;
+   Point2 = 40, 6, 2;
+   Material.Id = 17;
+}
+Box1116
+{
+   Point1 = 39, 5, 2;
+   Point2 = 40, 6, 3;
+   Material.Id = 1;
+}
+Box1117
+{
+   Point1 = 39, 5, 3;
+   Point2 = 40, 6, 4;
+   Material.Id = 17;
+}
+Box1118
+{
+   Point1 = 39, 5, 4;
+   Point2 = 40, 6, 5;
+   Material.Id = 17;
+}
+Box1119
+{
+   Point1 = 39, 6, 1;
+   Point2 = 40, 7, 2;
+   Material.Id = 1;
+}
+Box1120
+{
+   Point1 = 39, 6, 2;
+   Point2 = 40, 7, 3;
+   Material.Id = 1;
+}
+Box1121
+{
+   Point1 = 39, 6, 3;
+   Point2 = 40, 7, 4;
+   Material.Id = 1;
+}
+Box1122
+{
+   Point1 = 39, 7, 1;
+   Point2 = 40, 8, 2;
+   Material.Id = 1;
+}
+Box1123
+{
+   Point1 = 39, 7, 2;
+   Point2 = 40, 8, 3;
+   Material.Id = 1;
+}
+Box1124
+{
+   Point1 = 39, 7, 3;
+   Point2 = 40, 8, 4;
+   Material.Id = 1;
+}
+Box1125
+{
+   Point1 = 39, 7, 4;
+   Point2 = 40, 8, 5;
+   Material.Id = 9;
+}
+Box1126
+{
+   Point1 = 39, 8, 1;
+   Point2 = 40, 9, 2;
+   Material.Id = 1;
+}
+Box1127
+{
+   Point1 = 39, 8, 2;
+   Point2 = 40, 9, 3;
+   Material.Id = 1;
+}
+Box1128
+{
+   Point1 = 39, 8, 3;
+   Point2 = 40, 9, 4;
+   Material.Id = 1;
+}
+Box1129
+{
+   Point1 = 39, 8, 4;
+   Point2 = 40, 9, 5;
+   Material.Id = 9;
+}
+Box1130
+{
+   Point1 = 39, 9, 1;
+   Point2 = 40, 10, 2;
+   Material.Id = 1;
+}
+Box1131
+{
+   Point1 = 39, 9, 2;
+   Point2 = 40, 10, 3;
+   Material.Id = 1;
+}
+Box1132
+{
+   Point1 = 39, 9, 3;
+   Point2 = 40, 10, 4;
+   Material.Id = 1;
+}
+Box1133
+{
+   Point1 = 39, 9, 4;
+   Point2 = 40, 10, 5;
+   Material.Id = 9;
+}
+Box1134
+{
+   Point1 = 39, 10, 1;
+   Point2 = 40, 11, 2;
+   Material.Id = 9;
+}
+Box1135
+{
+   Point1 = 39, 10, 2;
+   Point2 = 40, 11, 3;
+   Material.Id = 9;
+}
+Box1136
+{
+   Point1 = 39, 10, 3;
+   Point2 = 40, 11, 4;
+   Material.Id = 9;
+}
+Box1137
+{
+   Point1 = 39, 10, 4;
+   Point2 = 40, 11, 5;
+   Material.Id = 9;
+}
+Box1138
+{
+   Point1 = 40, 2, 2;
+   Point2 = 41, 3, 3;
+   Material.Id = 1;
+}
+Box1139
+{
+   Point1 = 40, 3, 2;
+   Point2 = 41, 4, 3;
+   Material.Id = 1;
+}
+Box1140
+{
+   Point1 = 40, 4, 2;
+   Point2 = 41, 5, 3;
+   Material.Id = 17;
+}
+Box1141
+{
+   Point1 = 40, 5, 2;
+   Point2 = 41, 6, 3;
+   Material.Id = 17;
+}
+Box1142
+{
+   Point1 = 40, 7, 2;
+   Point2 = 41, 8, 3;
+   Material.Id = 1;
+}
+Box1143
+{
+   Point1 = 40, 8, 1;
+   Point2 = 41, 9, 2;
+   Material.Id = 9;
+}
+Box1144
+{
+   Point1 = 40, 8, 2;
+   Point2 = 41, 9, 3;
+   Material.Id = 9;
+}
+Box1145
+{
+   Point1 = 40, 8, 3;
+   Point2 = 41, 9, 4;
+   Material.Id = 9;
+}
+Box1146
+{
+   Point1 = 40, 9, 1;
+   Point2 = 41, 10, 2;
+   Material.Id = 9;
+}
+Box1147
+{
+   Point1 = 40, 9, 2;
+   Point2 = 41, 10, 3;
+   Material.Id = 9;
+}
+Box1148
+{
+   Point1 = 40, 9, 3;
+   Point2 = 41, 10, 4;
+   Material.Id = 9;
+}
+Box1149
+{
+   Point1 = -10000, -1, -10000;
+   Point2 = 10000, 0, 10000;
+   Material.Id = 18;
+}

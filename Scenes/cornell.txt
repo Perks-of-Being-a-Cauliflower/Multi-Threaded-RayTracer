@@ -1,0 +1,144 @@
+/////////////////////////////////////////
+// Sixth version of the scene file format
+// 
+// - It allows you to add comments like this one
+// - Syntax itself is hopefully self explanatory
+// - Name of the objects and attributes are defined inside the executable
+
+///////////////////////////////////////
+//    Global scene and viewpoint     //
+/////////////////////////////////////// 
+
+Scene 
+{
+	// make sure the version and the executable match !
+	Version.Major = 1;
+	Version.Minor = 5;
+
+	Camera.Position = 0.0, 0.0, -200.0;
+	Camera.Rotation = 0.0;
+	Camera.FieldOfView = 90.0;
+
+	// Image Exposure
+	Exposure = -2.5;
+	
+	Skybox.Material.Id = 0;
+
+	// Count the objects in the scene
+	NumberOfMaterials = 5;
+	NumberOfSpheres = 2;
+	NumberOfLights = 1; 
+	NumberOfBoxes = 5;
+}
+
+///////////////////////////////////////
+//         List of materials         //
+/////////////////////////////////////// 
+
+Material0
+{
+	Type = gouraud;
+	Diffuse = 0.75, 0.75, 0.75;
+	Specular = 1.2, 1.2, 1.2;  
+	Power = 60;
+	Reflection = 0.05;
+}
+Material1
+{
+	Type = gouraud;
+	Diffuse = 0.75, 0.25, 0.25;
+	Specular = 1.2, 1.2, 1.2;  
+	Power = 60;
+	Reflection = 0.05;
+}
+Material2
+{
+	Type = gouraud;
+	Diffuse = 0.25, 0.25, 0.75;
+	Specular = 1.2, 1.2, 1.2;  
+	Power = 60;
+}
+Material3
+{
+	Type = gouraud;
+	Reflection = 1.0;
+	Specular = 1.5, 1.5, 1.5;  
+	Power = 30;
+}
+Material4
+{
+	Type = gouraud;
+	Refraction = 1.0;
+	Density = 2.0;
+	Specular = 1.5, 1.5, 1.5;  
+	Power = 30;
+}
+
+///////////////////////////////////////
+//         List of boxes             //
+/////////////////////////////////////// 
+
+Box0
+{
+    Point1 = -401, -401, 0;
+    Point2 = 401, -400, 800;
+	Material.Id = 0;
+}
+Box1
+{
+    Point1 = -401, 400, 0;
+    Point2 = 401, 401, 800;
+	Material.Id = 0;
+}
+Box2
+{
+    Point1 = -401, -401, 0;
+    Point2 = -400, 401, 800;
+	Material.Id = 1;
+}
+Box3
+{
+    Point1 = 400, -401, 0;
+    Point2 = 401, 401, 800;
+	Material.Id = 2;
+}
+Box4
+{
+    Point1 = -401, -401, 800;
+    Point2 = 401, 401, 801;
+	Material.Id = 0;
+}
+
+///////////////////////////////////////
+//         List of spheres           //
+/////////////////////////////////////// 
+Sphere0
+{
+  Center = -200.0, -250.0, 450.0;
+  Size = 150.0;
+  Material.Id = 3;
+}
+Sphere1
+{
+  Center = 200.0, -250.0, 350.0;
+  Size = 150.0;
+  Material.Id = 4;
+}
+
+
+///////////////////////////////////////
+//         List of lights            //
+/////////////////////////////////////// 
+
+Light0
+{
+  Position = 0.0, 300.0, 400.0;
+  Intensity = 0.5, 0.5, 0.5;
+}
+Light1
+{
+  Position = 0.0, -300.0, -3000.0;
+  Intensity = 0.5, 0.5, 0.5;
+}
+
+

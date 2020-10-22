@@ -1,0 +1,230 @@
+/////////////////////////////////////////
+// Sixth version of the scene file format
+// 
+// - It allows you to add comments like this one
+// - Syntax itself is hopefully self explanatory
+// - Name of the objects and attributes are defined inside the executable
+
+///////////////////////////////////////
+//    Global scene and viewpoint     //
+/////////////////////////////////////// 
+
+Scene 
+{
+	// make sure the version and the executable match !
+	Version.Major = 1;
+	Version.Minor = 5;
+
+	Camera.Position = 0.0, 0.0, 100.0;
+	Camera.Rotation = 0.0;
+	Camera.FieldOfView = 55.0;
+
+	// Image Exposure
+	Exposure = -2.5;
+	
+	Skybox.Material.Id = 10;
+
+	// Count the objects in the scene
+	NumberOfMaterials = 11;
+	NumberOfSpheres = 6;
+	NumberOfLights = 2;
+	NumberOfBoxes = 1;
+}
+
+///////////////////////////////////////
+//         List of materials         //
+/////////////////////////////////////// 
+
+Material0
+{
+	Type = checkerboard;
+	Diffuse = 0.9, 0.9, 0.9;   
+	Diffuse2 = 0.7, 0.0, 0.0;    
+	Size = 10;
+	//Offset = 0, 0, 10;
+}
+
+Material1
+{
+	Type = circles;
+	Size = 10;
+	Diffuse = 1.00, 0.75, 0.75;
+	Diffuse2 = 0.25, 0.5, 0;
+}
+
+Material2
+{
+	Type = wood;
+	Size = 22;
+	Diffuse = 0.3, 1.0, 0.3;
+	Diffuse2 = 1.0, 1.0, 0.3;
+}
+
+Material3
+{
+	Type = gouraud;
+	Diffuse = 1.5, 1.5, 1.5;
+	Diffuse2 = 0, 0, 0.25;
+	Size = 1;
+}
+
+Material4
+{
+	Type = gouraud;
+	Diffuse = 0.25, 0.25, 0.25;
+	Reflection = 0.8;
+	Specular = 1.2, 1.2, 1.2;
+	Power = 60;
+}
+
+Material5
+{
+	Type = gouraud;
+	Diffuse = 0, 0, 0;
+	Refraction = 1;
+	Density = 1.8;
+	Specular = 1.2, 1.2, 1.2;
+	Power = 100;
+}
+
+Material6
+{
+	Type = gouraud;
+	Diffuse = 0, 0, 0;
+	Reflection = 1;
+	Specular = 1.2, 1.2, 1.2;
+	Power = 60;
+	BumpSize = 5;
+	BumpAmount = 0.5;
+}
+
+Material7
+{
+	Type = gouraud;
+	Diffuse = 0.75, 0.25, 0.25;
+}
+
+Material8
+{
+	Type = gouraud;
+	Diffuse = 0.25, 0.25, 1.00;
+	Specular = 1.2, 1.2, 1.2;
+	Power = 200;
+}
+
+Material9
+{
+	//Type = gouraud;
+	Type = checkerboard;
+	Wrapping = planar_xy;
+	Diffuse = 0.1, 0.1, 0.7;
+	Diffuse2 = 0.7, 0.7, 1.00;
+	Size = 100;
+	Offset = 0, 0, 10;
+}
+
+Material10
+{
+	Type = gouraud;
+	Diffuse = 0.0, 0.0, 0.0;
+}
+
+
+///////////////////////////////////////
+//         List of models            //
+/////////////////////////////////////// 
+
+Box0
+{
+    Point1 = -1000, -1000, 499;
+    Point2 = 1000, 1000, 500;
+	//Center = 0.0, 0.0, 500.0;
+	//Size = 1000;
+	//Normal = 0.0, 0.0, -1.0;
+	Material.Id = 9;
+	Triangles = 2;
+	Triangle0 = 
+		-1, -1, 0,
+		-1, 1, 0,
+		1, -1, 0;
+	Triangle1 = 
+		1, -1, 0,
+		-1, 1, 0,
+		1, 1, 0;
+}
+
+
+///////////////////////////////////////
+//         List of spheres           //
+/////////////////////////////////////// 
+Sphere0
+{
+  Center = -100.0, -75.0, 400.0;
+  Size = 45.0;
+  Material.Id = 0;
+}
+Sphere1
+{
+  Center = 0.0, -75.0, 400.0;
+  Size = 45.0;
+  Material.Id = 1;
+}
+Sphere2
+{
+  Center = 100.0, -75.0, 400.0;
+  Size = 45.0;
+  Material.Id = 2;
+}
+Sphere3
+{
+  Center = -100.0, 75.0, 400.0;
+  Size = 45.0;
+  Material.Id = 3;
+}
+Sphere4
+{
+  Center = 0.0, 75.0, 400.0;
+  Size = 45.0;
+  Material.Id = 4;
+}
+Sphere5
+{
+  Center = 100.0, 75.0, 400.0;
+  Size = 45.0;
+  Material.Id = 5;
+}
+Sphere6
+{
+  Center = -100.0, 100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 6;
+}
+Sphere7
+{
+  Center = 0.0, 100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 7;
+}
+Sphere8
+{
+  Center = 100.0, 100.0, 400.0;
+  Size = 45.0;
+  Material.Id = 8;
+}
+
+///////////////////////////////////////
+//         List of lights            //
+/////////////////////////////////////// 
+Light0
+{
+  Position = 1000.0, 1000.0, -4000.0;
+  Intensity = 0.5, 0.5, 0.5;
+}
+
+Light1
+{
+  Position = -200.0, 100.0, 450.0;
+  Intensity = 0.25, 0.25, 0.25;
+}
+
+
